@@ -1,0 +1,32 @@
+---
+title: PostComments
+slug: /components/postcomments
+---
+
+# PostComments
+
+
+
+## Real Usage Examples
+
+### Usage 1
+
+```tsx
+<PostComments
+comments={comments}
+onAddComment={handleAddComment}
+onLikeComment={handleLikeComment}
+/>
+```
+
+## Props
+
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `comments` | `Comment[]` | No | `[]` |  |
+| `onAddComment` | `(text: string) => void` | Yes | - |  |
+| `onLikeComment` | `(commentId: number) => void` | Yes | - |  |
+
+
+## Source
+`src\features\post\components\PostComments.tsx`

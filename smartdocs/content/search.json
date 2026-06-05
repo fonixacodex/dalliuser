@@ -1,0 +1,6176 @@
+{
+  "components": [
+    {
+      "displayName": "proxy",
+      "filePath": "src\\proxy.ts",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "cookies",
+          "type": "RequestCookies",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "nextUrl",
+          "type": "NextURL",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "page",
+          "type": "void",
+          "required": true,
+          "description": "@deprecated `page` has been deprecated in favour of `URLPattern`.\nRead more: https://nextjs.org/docs/messages/middleware-request-page"
+        },
+        {
+          "name": "ua",
+          "type": "void",
+          "required": true,
+          "description": "@deprecated `ua` has been removed in favour of \\`userAgent\\` function.\nRead more: https://nextjs.org/docs/messages/middleware-parse-user-agent"
+        },
+        {
+          "name": "url",
+          "type": "string",
+          "required": true,
+          "description": "The **`url`** read-only property of the Request interface contains the URL of the request.\n\n[MDN Reference](https://developer.mozilla.org/docs/Web/API/Request/url)"
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "globalerror",
+      "filePath": "src\\app\\global-error.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "error",
+          "type": "Error & { digest?: string | undefined; }",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "reset",
+          "type": "() => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "layout",
+      "filePath": "src\\app\\layout.tsx",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "error",
+      "filePath": "src\\app\\auth\\error.tsx",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "layout",
+      "filePath": "src\\app\\auth\\layout.tsx",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "error",
+      "filePath": "src\\app\\dashboard\\error.tsx",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "layout",
+      "filePath": "src\\app\\dashboard\\layout.tsx",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "ThemeProvider",
+      "filePath": "src\\components\\darkmoode\\ThemeProvider.tsx",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": [
+        "<ThemeProvider>\n{children}\n<Toaster\nposition=\"top-center\"\nreverseOrder={false}\ntoastOptions={{\nduration: 3000,\nstyle: {\ndirection: \"rtl\",\nbackground: \"#363636\",\ncolor: \"#fff\",\nfontSize: \"14px\",\npadding: \"12px\",\nborderRadius: \"12px\",\n},\nsuccess: {\nduration: 3000,\niconTheme: {\nprimary: \"#10B981\",\nsecondary: \"#fff\",\n},\n},\nerror: {\nduration: 4000,\niconTheme: {\nprimary: \"#EF4444\",\nsecondary: \"#fff\",\n},\n},\n}}\n/>\n</ThemeProvider>"
+      ]
+    },
+    {
+      "displayName": "useOtpTimer",
+      "filePath": "src\\features\\auth\\hooks\\useOtpTimer.ts",
+      "description": "",
+      "type": "hook",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": [
+        "const { timeLeft, isActive, formatTime, resetTimer } = useOtpTimer(120);"
+      ],
+      "hookSignature": "",
+      "parameters": [],
+      "returnType": {
+        "type": "any"
+      },
+      "hookUsages": [
+        {
+          "file": "src\\features\\auth\\components\\VerifyOtpForm.tsx",
+          "line": 26,
+          "code": "const { timeLeft, isActive, formatTime, resetTimer } = useOtpTimer(120);",
+          "context": "inputRefs",
+          "destructuring": [
+            "timeLeft",
+            "isActive",
+            "formatTime",
+            "resetTimer"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        }
+      ],
+      "isBuiltInHook": false,
+      "hookCategory": "custom"
+    },
+    {
+      "displayName": "sendOtp",
+      "filePath": "src\\features\\auth\\services\\auth.service.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "SendOtpForm",
+      "filePath": "src\\features\\auth\\components\\SendOtpForm.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "isLoading",
+          "type": "boolean",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onSubmit",
+          "type": "(phone: string) => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<SendOtpForm isLoading={isLoading} onSubmit={handleSendOtp} />"
+      ]
+    },
+    {
+      "displayName": "VerifyOtpForm",
+      "filePath": "src\\features\\auth\\components\\VerifyOtpForm.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "phone",
+          "type": "string",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "isLoading",
+          "type": "boolean",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onVerify",
+          "type": "(code: string) => void",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onBack",
+          "type": "() => void",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onResend",
+          "type": "() => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<VerifyOtpForm\nphone={phone}\nisLoading={isLoading}\nonVerify={handleVerifyOtp}\nonBack={handleBack}\nonResend={handleResend}\n/>"
+      ]
+    },
+    {
+      "displayName": "validate",
+      "filePath": "src\\features\\auth\\utils\\phone.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "format",
+      "filePath": "src\\features\\auth\\utils\\phone.utils.ts",
+      "description": "",
+      "type": "page",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": [],
+      "usedComponents": []
+    },
+    {
+      "displayName": "getErrorMessage",
+      "filePath": "src\\features\\auth\\utils\\phone.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "EmptyState",
+      "filePath": "src\\features\\explore\\components\\EmptyState.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "searchQuery",
+          "type": "string",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<EmptyState searchQuery={searchQuery} />",
+        "<EmptyState />"
+      ]
+    },
+    {
+      "displayName": "ExploreGrid",
+      "filePath": "src\\features\\explore\\components\\ExploreGrid.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "posts",
+          "type": "ExplorePost[]",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "isLoading",
+          "type": "boolean",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "searchQuery",
+          "type": "string",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<ExploreGrid\nposts={posts}\nisLoading={isLoading}\nsearchQuery={searchQuery}\n/>"
+      ]
+    },
+    {
+      "displayName": "ExplorePost",
+      "filePath": "src\\features\\explore\\components\\ExplorePost.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "post",
+          "type": "{ id: number; username: string; userAvatar: string; image: string; caption: string; likes: number; comments: number; timestamp: string; width: number; height: number; }",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onClick",
+          "type": "() => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<ExplorePost key={post.id} post={post} onClick={() => setSelectedPost(post)} />"
+      ]
+    },
+    {
+      "displayName": "PostModal",
+      "filePath": "src\\features\\explore\\components\\PostModal.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "post",
+          "type": "{ id: number; username: string; userAvatar: string; image: string; caption: string; likes: number; comments: number; timestamp: string; }",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<PostModal post={selectedPost} onClose={() => setSelectedPost(null)} />"
+      ]
+    },
+    {
+      "displayName": "SearchBar",
+      "filePath": "src\\features\\explore\\components\\SearchBar.tsx",
+      "description": "",
+      "type": "page",
+      "props": [
+        {
+          "name": "onSearch",
+          "type": "(query: string) => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [],
+      "usedComponents": [
+        {
+          "name": "useSearch",
+          "type": "hook",
+          "count": 2,
+          "firstUsage": "ops) {\r\n  const { query, isTyping, handleChange, h"
+        }
+      ]
+    },
+    {
+      "displayName": "formatLikes",
+      "filePath": "src\\features\\explore\\utils\\explore.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "DesktopSidebar",
+      "filePath": "src\\features\\dashboard\\components\\DesktopSidebar.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "tabs",
+          "type": "Tab[]",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "activeTab",
+          "type": "string",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onTabChange",
+          "type": "(tabId: any) => void",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "isDarkMode",
+          "type": "boolean",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onToggleTheme",
+          "type": "() => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<DesktopSidebar\ntabs={tabs}\nactiveTab={activeTab}\nonTabChange={setActiveTab}\nisDarkMode={isDarkMode}\nonToggleTheme={toggleDarkMode}\n/>"
+      ]
+    },
+    {
+      "displayName": "MobileBottomNav",
+      "filePath": "src\\features\\dashboard\\components\\MobileBottomNav.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "tabs",
+          "type": "Tab[]",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "activeTab",
+          "type": "string",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onTabChange",
+          "type": "(tabId: any) => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<MobileBottomNav tabs={tabs} activeTab={activeTab} onTabChange={setActiveTab} />"
+      ]
+    },
+    {
+      "displayName": "ThemeToggle",
+      "filePath": "src\\features\\dashboard\\components\\ThemeToggle.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "isDarkMode",
+          "type": "boolean",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onToggle",
+          "type": "() => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<ThemeToggle />",
+        "<ThemeToggle isDarkMode={isDarkMode} onToggle={onToggleTheme} />"
+      ]
+    },
+    {
+      "displayName": "getTabIcon",
+      "filePath": "src\\features\\dashboard\\utils\\dashboard.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "getTabTitle",
+      "filePath": "src\\features\\dashboard\\utils\\dashboard.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "saveThemeToLocal",
+      "filePath": "src\\features\\dashboard\\utils\\dashboard.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "applyTheme",
+      "filePath": "src\\features\\dashboard\\utils\\dashboard.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "formatDate",
+      "filePath": "src\\features\\dashboard\\utils\\dashboard.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "validatePhone",
+      "filePath": "src\\features\\dashboard\\utils\\dashboard.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "formatPhoneNumber",
+      "filePath": "src\\features\\dashboard\\utils\\dashboard.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "cn",
+      "filePath": "src\\features\\dashboard\\utils\\dashboard.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "copyToClipboard",
+      "filePath": "src\\features\\dashboard\\utils\\dashboard.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "getQueryParam",
+      "filePath": "src\\features\\dashboard\\utils\\dashboard.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "AspectRatioSelector",
+      "filePath": "src\\features\\create\\components\\AspectRatioSelector.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "selected",
+          "type": "enum",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onChange",
+          "type": "(ratio: AspectRatio) => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<AspectRatioSelector selected={aspectRatio} onChange={updateAspectRatio} />"
+      ]
+    },
+    {
+      "displayName": "CreateStory",
+      "filePath": "src\\features\\create\\components\\CreateStory.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "onSuccess",
+          "type": "(() => void)",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<CreateStory />"
+      ]
+    },
+    {
+      "displayName": "FiltersPanel",
+      "filePath": "src\\features\\create\\components\\FiltersPanel.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "settings",
+          "type": "{ brightness: number; contrast: number; saturation: number; temperature: number; }",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onChange",
+          "type": "(key: string, value: number) => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "ImageEditor",
+      "filePath": "src\\features\\create\\components\\ImageEditor.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "imageUrl",
+          "type": "string",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onSave",
+          "type": "(editedImage: string) => void",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "ImageFilters",
+      "filePath": "src\\features\\create\\components\\ImageFilters.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "selected",
+          "type": "enum",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onChange",
+          "type": "(filter: FilterType) => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<ImageFilters selected={filter} onChange={updateFilter} />"
+      ]
+    },
+    {
+      "displayName": "LinkInput",
+      "filePath": "src\\features\\create\\components\\LinkInput.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "onAdd",
+          "type": "(link: { url: string; title: string; displayType: \"button\" | \"text\" | \"swipe\"; }) => void",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onRemove",
+          "type": "(() => void)",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "existingLink",
+          "type": "{ url: string; title: string; displayType: string; } | null",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "SettingsPanel",
+      "filePath": "src\\features\\create\\components\\SettingsPanel.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "settings",
+          "type": "PostSettings",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onChange",
+          "type": "(settings: PostSettings) => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<SettingsPanel settings={postSettings} onChange={setPostSettings} />"
+      ]
+    },
+    {
+      "displayName": "TextOverlay",
+      "filePath": "src\\features\\create\\components\\TextOverlay.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "onAddText",
+          "type": "(text: { text: string; x: number; y: number; fontSize: number; color: string; }) => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "useImageUpload",
+      "filePath": "src\\features\\create\\hooks\\useImageUpload.ts",
+      "description": "",
+      "type": "hook",
+      "props": [
+        {
+          "name": "maxFiles",
+          "type": "number",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "maxSize",
+          "type": "number",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "acceptedTypes",
+          "type": "string[]",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "convertToWebP",
+          "type": "boolean",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "webpQuality",
+          "type": "number",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [],
+      "hookSignature": "",
+      "parameters": [],
+      "returnType": {
+        "type": "any"
+      },
+      "hookUsages": [],
+      "isBuiltInHook": false,
+      "hookCategory": "custom"
+    },
+    {
+      "displayName": "NotificationHeader",
+      "filePath": "src\\features\\notifications\\components\\NotificationHeader.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "unreadCount",
+          "type": "number",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<NotificationHeader unreadCount={unreadCount} />"
+      ]
+    },
+    {
+      "displayName": "NotificationItem",
+      "filePath": "src\\features\\notifications\\components\\NotificationItem.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "notification",
+          "type": "Notification",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onAccept",
+          "type": "((id: number) => void)",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "onReject",
+          "type": "((id: number) => void)",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "onMarkAsRead",
+          "type": "((id: number) => void)",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "onFollowBack",
+          "type": "((username: string) => void)",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<NotificationItem\nkey={notif.id}\nnotification={notif}\nonAccept={onAccept}\nonReject={onReject}\nonMarkAsRead={onMarkAsRead}\nonFollowBack={onFollowBack}\n/>"
+      ]
+    },
+    {
+      "displayName": "NotificationList",
+      "filePath": "src\\features\\notifications\\components\\NotificationList.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "notifications",
+          "type": "Notification[]",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "activeTab",
+          "type": "enum",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onAccept",
+          "type": "(id: number) => void",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onReject",
+          "type": "(id: number) => void",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onMarkAsRead",
+          "type": "(id: number) => void",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onFollowBack",
+          "type": "(username: string) => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<NotificationList\nnotifications={notifications}\nactiveTab={activeTab}\nonAccept={handleAcceptRequest}\nonReject={handleRejectRequest}\nonMarkAsRead={handleMarkAsRead}\nonFollowBack={handleFollowBack}\n/>"
+      ]
+    },
+    {
+      "displayName": "NotificationTabs",
+      "filePath": "src\\features\\notifications\\components\\NotificationTabs.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "activeTab",
+          "type": "enum",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onTabChange",
+          "type": "(tab: NotificationTabType) => void",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "unreadCount",
+          "type": "number",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "requestCount",
+          "type": "number",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<NotificationTabs\nactiveTab={activeTab}\nonTabChange={setActiveTab}\nunreadCount={unreadCount}\nrequestCount={requestCount}\n/>"
+      ]
+    },
+    {
+      "displayName": "getNotificationIcon",
+      "filePath": "src\\features\\notifications\\utils\\notification.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "getUnreadCount",
+      "filePath": "src\\features\\notifications\\utils\\notification.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "getRequestCount",
+      "filePath": "src\\features\\notifications\\utils\\notification.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "PostActions",
+      "filePath": "src\\features\\post\\components\\PostActions.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "postId",
+          "type": "number",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "isLiked",
+          "type": "boolean",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "isSaved",
+          "type": "boolean",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "likesCount",
+          "type": "number",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onLike",
+          "type": "() => void",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onSave",
+          "type": "() => void",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onCommentClick",
+          "type": "() => void",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onShare",
+          "type": "() => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<PostActions\npostId={post.id}\nisLiked={isLiked}\nisSaved={isSaved}\nlikesCount={likesCount}\nonLike={handleLike}\nonSave={handleSave}\nonCommentClick={handleCommentClick}\nonShare={handleShare}\n/>"
+      ]
+    },
+    {
+      "displayName": "PostCard",
+      "filePath": "src\\features\\post\\components\\PostCard.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "post",
+          "type": "Post",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onLike",
+          "type": "(id: number) => void",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onSave",
+          "type": "(id: number) => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<PostCard\nkey={post.id}\npost={post}\nonLike={likePost}\nonSave={savePost}\n/>"
+      ]
+    },
+    {
+      "displayName": "PostComments",
+      "filePath": "src\\features\\post\\components\\PostComments.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "comments",
+          "type": "Comment[]",
+          "required": false,
+          "defaultValue": "[]",
+          "description": ""
+        },
+        {
+          "name": "onAddComment",
+          "type": "(text: string) => void",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onLikeComment",
+          "type": "(commentId: number) => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<PostComments\ncomments={comments}\nonAddComment={handleAddComment}\nonLikeComment={handleLikeComment}\n/>"
+      ]
+    },
+    {
+      "displayName": "PostDropdown",
+      "filePath": "src\\features\\post\\components\\PostDropdown.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "postId",
+          "type": "number",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "username",
+          "type": "string",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "isOpen",
+          "type": "boolean",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onToggle",
+          "type": "() => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<PostDropdown\npostId={postId}\nusername={username}\nisOpen={showDropdown}\nonToggle={() => setShowDropdown(!showDropdown)}\n/>"
+      ]
+    },
+    {
+      "displayName": "PostHeader",
+      "filePath": "src\\features\\post\\components\\PostHeader.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "postId",
+          "type": "number",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "username",
+          "type": "string",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "userAvatar",
+          "type": "string",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "timestamp",
+          "type": "string",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<PostHeader\npostId={post.id}\nusername={post.username}\nuserAvatar={post.userAvatar}\ntimestamp={post.timestamp}\n/>"
+      ]
+    },
+    {
+      "displayName": "PostImage",
+      "filePath": "src\\features\\post\\components\\PostImage.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "image",
+          "type": "string",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "alt",
+          "type": "string",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "priority",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": "false",
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<PostImage image={post.image} alt={post.caption} />"
+      ]
+    },
+    {
+      "displayName": "useComments",
+      "filePath": "src\\features\\post\\hooks\\useComments.ts",
+      "description": "",
+      "type": "hook",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": [],
+      "hookSignature": "",
+      "parameters": [],
+      "returnType": {
+        "type": "any"
+      },
+      "hookUsages": [],
+      "isBuiltInHook": false,
+      "hookCategory": "custom"
+    },
+    {
+      "displayName": "usePostActions",
+      "filePath": "src\\features\\post\\hooks\\usePostActions.ts",
+      "description": "",
+      "type": "hook",
+      "props": [
+        {
+          "name": "isLiked",
+          "type": "boolean",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "isSaved",
+          "type": "boolean",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "isBookmarked",
+          "type": "boolean",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "likesCount",
+          "type": "number",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "sharesCount",
+          "type": "number",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "viewsCount",
+          "type": "number",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [],
+      "hookSignature": "",
+      "parameters": [],
+      "returnType": {
+        "type": "any"
+      },
+      "hookUsages": [],
+      "isBuiltInHook": false,
+      "hookCategory": "custom"
+    },
+    {
+      "displayName": "formatLikes",
+      "filePath": "src\\features\\post\\utils\\posts.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "getRelativeTime",
+      "filePath": "src\\features\\post\\utils\\posts.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "extractHashtags",
+      "filePath": "src\\features\\post\\utils\\posts.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "extractMentions",
+      "filePath": "src\\features\\post\\utils\\posts.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "getPostsStats",
+      "filePath": "src\\features\\post\\utils\\posts.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "isValidComment",
+      "filePath": "src\\features\\post\\utils\\posts.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "filterInappropriateComments",
+      "filePath": "src\\features\\post\\utils\\posts.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "groupPostsByDate",
+      "filePath": "src\\features\\post\\utils\\posts.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "getShareText",
+      "filePath": "src\\features\\post\\utils\\posts.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "id",
+          "type": "number",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "userId",
+          "type": "number",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "username",
+          "type": "string",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "userAvatar",
+          "type": "string",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "image",
+          "type": "string",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "caption",
+          "type": "string",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "likes",
+          "type": "number",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "comments",
+          "type": "number",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "timestamp",
+          "type": "string",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "isLiked",
+          "type": "boolean",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "isSaved",
+          "type": "boolean",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "getPostShareLink",
+      "filePath": "src\\features\\post\\utils\\posts.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "copyPostLink",
+      "filePath": "src\\features\\post\\utils\\posts.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "getRandomAvatarColor",
+      "filePath": "src\\features\\post\\utils\\posts.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "isValidImage",
+      "filePath": "src\\features\\post\\utils\\posts.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "formatFileSize",
+      "filePath": "src\\features\\post\\utils\\posts.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "ProfileActions",
+      "filePath": "src\\features\\profile\\components\\ProfileActions.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "isFollowing",
+          "type": "boolean",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onFollow",
+          "type": "() => void",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onEdit",
+          "type": "() => void",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onShare",
+          "type": "() => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<ProfileActions\nisFollowing={isFollowing}\nonFollow={handleFollow}\nonEdit={handleEditProfile}\nonShare={handleShare}\n/>"
+      ]
+    },
+    {
+      "displayName": "ProfileAvatar",
+      "filePath": "src\\features\\profile\\components\\ProfileAvatar.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "avatar",
+          "type": "string",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<ProfileAvatar avatar={user.avatar} />"
+      ]
+    },
+    {
+      "displayName": "ProfileBio",
+      "filePath": "src\\features\\profile\\components\\ProfileBio.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "user",
+          "type": "ProfileUser",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<ProfileBio user={user} />"
+      ]
+    },
+    {
+      "displayName": "ProfileGrid",
+      "filePath": "src\\features\\profile\\components\\ProfileGrid.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "posts",
+          "type": "ProfilePost[]",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<ProfileGrid posts={posts} />"
+      ]
+    },
+    {
+      "displayName": "ProfileHeader",
+      "filePath": "src\\features\\profile\\components\\ProfileHeader.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "avatar",
+          "type": "string",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onSettingsClick",
+          "type": "() => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<ProfileHeader avatar={user.avatar} onSettingsClick={() => setIsSettingsOpen(true)} />"
+      ]
+    },
+    {
+      "displayName": "ProfilePost",
+      "filePath": "src\\features\\profile\\components\\ProfilePost.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "post",
+          "type": "ProfilePost",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<ProfilePost key={post.id} post={post} />"
+      ]
+    },
+    {
+      "displayName": "ProfileStats",
+      "filePath": "src\\features\\profile\\components\\ProfileStats.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "stats",
+          "type": "ProfileStats",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<ProfileStats stats={stats} />"
+      ]
+    },
+    {
+      "displayName": "ProfileTabs",
+      "filePath": "src\\features\\profile\\components\\ProfileTabs.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "activeTab",
+          "type": "enum",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onTabChange",
+          "type": "(tab: TabType) => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<ProfileTabs activeTab={activeTab} onTabChange={setActiveTab} />"
+      ]
+    },
+    {
+      "displayName": "followUser",
+      "filePath": "src\\features\\profile\\services\\profile.service.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "unfollowUser",
+      "filePath": "src\\features\\profile\\services\\profile.service.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "formatNumber",
+      "filePath": "src\\features\\profile\\utils\\profile.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "getRelativeTime",
+      "filePath": "src\\features\\profile\\utils\\profile.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "isValidUsername",
+      "filePath": "src\\features\\profile\\utils\\profile.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "isValidEmail",
+      "filePath": "src\\features\\profile\\utils\\profile.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "extractHashtags",
+      "filePath": "src\\features\\profile\\utils\\profile.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "extractMentions",
+      "filePath": "src\\features\\profile\\utils\\profile.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "getProfileCompletion",
+      "filePath": "src\\features\\profile\\utils\\profile.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "id",
+          "type": "number",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "username",
+          "type": "string",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "avatar",
+          "type": "string",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "bio",
+          "type": "string",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "website",
+          "type": "string",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "isVerified",
+          "type": "boolean",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "isFollowing",
+          "type": "boolean",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "getPostsStats",
+      "filePath": "src\\features\\profile\\utils\\profile.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "getRandomAvatarColor",
+      "filePath": "src\\features\\profile\\utils\\profile.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "getProfileSettings",
+      "filePath": "src\\features\\profile\\utils\\profile.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "isUserOnline",
+      "filePath": "src\\features\\profile\\utils\\profile.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "formatPostDate",
+      "filePath": "src\\features\\profile\\utils\\profile.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "SettingsDrawer",
+      "filePath": "src\\features\\settings\\components\\SettingsDrawer.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "isOpen",
+          "type": "boolean",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<SettingsDrawer isOpen={isSettingsOpen} onClose={() => setIsSettingsOpen(false)} />"
+      ]
+    },
+    {
+      "displayName": "SettingsHeader",
+      "filePath": "src\\features\\settings\\components\\SettingsHeader.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<SettingsHeader onClose={onClose} />"
+      ]
+    },
+    {
+      "displayName": "SettingsMenu",
+      "filePath": "src\\features\\settings\\components\\SettingsMenu.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "items",
+          "type": "MenuItem[]",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<SettingsMenu items={mainMenu} />"
+      ]
+    },
+    {
+      "displayName": "SettingsMenuItem",
+      "filePath": "src\\features\\settings\\components\\SettingsMenuItem.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "item",
+          "type": "MenuItem",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<SettingsMenuItem key={index} item={item} />"
+      ]
+    },
+    {
+      "displayName": "removeSetting",
+      "filePath": "src\\features\\settings\\utils\\settings.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "applyTheme",
+      "filePath": "src\\features\\settings\\utils\\settings.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "saveTheme",
+      "filePath": "src\\features\\settings\\utils\\settings.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "formatSettingDate",
+      "filePath": "src\\features\\settings\\utils\\settings.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "groupMenuByCategory",
+      "filePath": "src\\features\\settings\\utils\\settings.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "isValidUrl",
+      "filePath": "src\\features\\settings\\utils\\settings.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "copyToClipboard",
+      "filePath": "src\\features\\settings\\utils\\settings.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "settingsToJSON",
+      "filePath": "src\\features\\settings\\utils\\settings.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "loadSettingsFromJSON",
+      "filePath": "src\\features\\settings\\utils\\settings.utils.ts",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "StoryActions",
+      "filePath": "src\\features\\stories\\components\\StoryActions.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "storyId",
+          "type": "number",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "username",
+          "type": "string",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onLike",
+          "type": "(() => void)",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "onComment",
+          "type": "(() => void)",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "onShare",
+          "type": "(() => void)",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "onSave",
+          "type": "(() => void)",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "onDownload",
+          "type": "(() => void)",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "onReport",
+          "type": "(() => void)",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "StoryHeader",
+      "filePath": "src\\features\\stories\\components\\StoryHeader.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "username",
+          "type": "string",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "avatar",
+          "type": "string",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "timestamp",
+          "type": "string",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onMuteToggle",
+          "type": "(() => void)",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "isMuted",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": "false",
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "StoryProgress",
+      "filePath": "src\\features\\stories\\components\\StoryProgress.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "progress",
+          "type": "number",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "StoryViewer",
+      "filePath": "src\\features\\stories\\components\\StoryViewer.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "story",
+          "type": "Story",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onNext",
+          "type": "() => void",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "onPrev",
+          "type": "() => void",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "hasNext",
+          "type": "boolean",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "hasPrev",
+          "type": "boolean",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<StoryViewer\nstory={selectedStory}\nonClose={closeStory}\nonNext={nextStory}\nonPrev={prevStory}\nhasNext={hasNext}\nhasPrev={hasPrev}\n/>"
+      ]
+    },
+    {
+      "displayName": "ViewerList",
+      "filePath": "src\\features\\stories\\components\\ViewerList.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "viewers",
+          "type": "Viewer[]",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "viewCount",
+          "type": "number",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "useStoryTimer",
+      "filePath": "src\\features\\stories\\hooks\\useStoryTimer.ts",
+      "description": "",
+      "type": "hook",
+      "props": [
+        {
+          "name": "duration",
+          "type": "number",
+          "required": false,
+          "defaultValue": "5000",
+          "description": ""
+        },
+        {
+          "name": "autoPlay",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": "true",
+          "description": ""
+        },
+        {
+          "name": "onComplete",
+          "type": "(() => void)",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "onTick",
+          "type": "((progress: number) => void)",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [],
+      "hookSignature": "",
+      "parameters": [],
+      "returnType": {
+        "type": "any"
+      },
+      "hookUsages": [],
+      "isBuiltInHook": false,
+      "hookCategory": "custom"
+    },
+    {
+      "displayName": "ThemeToggle",
+      "filePath": "src\\shared\\ui\\toggle\\ThemeToggle.tsx",
+      "description": "",
+      "type": "component",
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "defaultValue": "{\"value\":\"\"}",
+          "description": ""
+        },
+        {
+          "name": "iconSize",
+          "type": "number",
+          "required": false,
+          "defaultValue": "18",
+          "description": ""
+        },
+        {
+          "name": "showText",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": "false",
+          "description": ""
+        }
+      ],
+      "examples": [],
+      "realUsageExamples": [
+        "<ThemeToggle />",
+        "<ThemeToggle isDarkMode={isDarkMode} onToggle={onToggleTheme} />"
+      ]
+    },
+    {
+      "displayName": "error",
+      "filePath": "src\\app\\dashboard\\tabs\\@create\\error.tsx",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "error",
+      "filePath": "src\\app\\dashboard\\tabs\\@explore\\error.tsx",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "error",
+      "filePath": "src\\app\\dashboard\\tabs\\@feed\\error.tsx",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "error",
+      "filePath": "src\\app\\dashboard\\tabs\\@notifications\\error.tsx",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "error",
+      "filePath": "src\\app\\dashboard\\tabs\\@profile\\error.tsx",
+      "description": "",
+      "type": "component",
+      "props": [],
+      "examples": [],
+      "realUsageExamples": []
+    },
+    {
+      "displayName": "useState",
+      "filePath": "React Built-in",
+      "description": "Returns a stateful value and a function to update it",
+      "type": "hook",
+      "props": [],
+      "hookUsages": [
+        {
+          "file": "src\\app\\not-found.tsx",
+          "line": 8,
+          "code": "const [isDarkMode, setIsDarkMode] = useState(false);",
+          "context": "NotFound",
+          "destructuring": [
+            "isDarkMode",
+            "setIsDarkMode"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\app\\not-found.tsx",
+          "line": 9,
+          "code": "const [mounted, setMounted] = useState(false);",
+          "context": "NotFound",
+          "destructuring": [
+            "mounted",
+            "setMounted"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\app\\page.tsx",
+          "line": 11,
+          "code": "const [isDarkMode, setIsDarkMode] = useState(false);",
+          "context": "router",
+          "destructuring": [
+            "isDarkMode",
+            "setIsDarkMode"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\components\\darkmoode\\ThemeProvider.tsx",
+          "line": 14,
+          "code": "const [isDarkMode, setIsDarkMode] = useState(false);",
+          "context": "ThemeProvider",
+          "destructuring": [
+            "isDarkMode",
+            "setIsDarkMode"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\components\\darkmoode\\ThemeProvider.tsx",
+          "line": 15,
+          "code": "const [mounted, setMounted] = useState(false);",
+          "context": "ThemeProvider",
+          "destructuring": [
+            "mounted",
+            "setMounted"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\auth\\hooks\\useAuth.ts",
+          "line": 11,
+          "code": "const [step, setStep] = useState<AuthStep>(\"send\");",
+          "context": "router",
+          "destructuring": [
+            "step",
+            "setStep"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\auth\\hooks\\useAuth.ts",
+          "line": 12,
+          "code": "const [phone, setPhone] = useState(\"\");",
+          "context": "router",
+          "destructuring": [
+            "phone",
+            "setPhone"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\auth\\hooks\\useAuth.ts",
+          "line": 13,
+          "code": "const [isLoading, setIsLoading] = useState(false);",
+          "context": "router",
+          "destructuring": [
+            "isLoading",
+            "setIsLoading"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\auth\\hooks\\useOtpTimer.ts",
+          "line": 6,
+          "code": "const [timeLeft, setTimeLeft] = useState(initialTime);",
+          "context": "useOtpTimer",
+          "destructuring": [
+            "timeLeft",
+            "setTimeLeft"
+          ],
+          "parameters": [
+            "initialTime"
+          ],
+          "defaults": {
+            "variable": "initialTime"
+          }
+        },
+        {
+          "file": "src\\features\\auth\\hooks\\useOtpTimer.ts",
+          "line": 7,
+          "code": "const [isActive, setIsActive] = useState(true);",
+          "context": "useOtpTimer",
+          "destructuring": [
+            "isActive",
+            "setIsActive"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\auth\\hooks\\usePhoneValidation.ts",
+          "line": 6,
+          "code": "const [phone, setPhone] = useState(\"\");",
+          "context": "usePhoneValidation",
+          "destructuring": [
+            "phone",
+            "setPhone"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\auth\\hooks\\usePhoneValidation.ts",
+          "line": 7,
+          "code": "const [error, setError] = useState(\"\");",
+          "context": "usePhoneValidation",
+          "destructuring": [
+            "error",
+            "setError"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\auth\\hooks\\usePhoneValidation.ts",
+          "line": 8,
+          "code": "const [isValid, setIsValid] = useState(false);",
+          "context": "usePhoneValidation",
+          "destructuring": [
+            "isValid",
+            "setIsValid"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\auth\\components\\AuthCarousel.tsx",
+          "line": 27,
+          "code": "const [currentSlide, setCurrentSlide] = useState(0);",
+          "context": "AuthCarousel",
+          "destructuring": [
+            "currentSlide",
+            "setCurrentSlide"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\auth\\components\\SendOtpForm.tsx",
+          "line": 17,
+          "code": "const [agreeTerms, setAgreeTerms] = useState(false);",
+          "context": "SendOtpForm",
+          "destructuring": [
+            "agreeTerms",
+            "setAgreeTerms"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\auth\\components\\SendOtpForm.tsx",
+          "line": 19,
+          "code": "const [isFocused, setIsFocused] = useState(false);",
+          "context": "SendOtpForm",
+          "destructuring": [
+            "isFocused",
+            "setIsFocused"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\auth\\components\\VerifyOtpForm.tsx",
+          "line": 23,
+          "code": "const [otp, setOtp] = useState([\"\", \"\", \"\", \"\", \"\", \"\"]);",
+          "context": "VerifyOtpForm",
+          "destructuring": [
+            "otp",
+            "setOtp"
+          ],
+          "parameters": [
+            "[...]"
+          ],
+          "defaults": {
+            "initialArray": "[...]"
+          }
+        },
+        {
+          "file": "src\\features\\auth\\components\\VerifyOtpForm.tsx",
+          "line": 24,
+          "code": "const [focusedIndex, setFocusedIndex] = useState<number | null>(null);",
+          "context": "VerifyOtpForm",
+          "destructuring": [
+            "focusedIndex",
+            "setFocusedIndex"
+          ],
+          "parameters": [
+            "{NullLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NullLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\explore\\components\\ExploreGrid.tsx",
+          "line": 17,
+          "code": "const [selectedPost, setSelectedPost] = useState<ExplorePostType | null>(null);",
+          "context": "ExploreGrid",
+          "destructuring": [
+            "selectedPost",
+            "setSelectedPost"
+          ],
+          "parameters": [
+            "{NullLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NullLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\explore\\components\\PostModal.tsx",
+          "line": 24,
+          "code": "const [liked, setLiked] = useState(false);",
+          "context": "PostModal",
+          "destructuring": [
+            "liked",
+            "setLiked"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\explore\\components\\PostModal.tsx",
+          "line": 25,
+          "code": "const [saved, setSaved] = useState(false);",
+          "context": "PostModal",
+          "destructuring": [
+            "saved",
+            "setSaved"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\explore\\components\\PostModal.tsx",
+          "line": 26,
+          "code": "const [likesCount, setLikesCount] = useState(post.likes);",
+          "context": "PostModal",
+          "destructuring": [
+            "likesCount",
+            "setLikesCount"
+          ],
+          "parameters": [
+            "{MemberExpression}"
+          ],
+          "defaults": {
+            "initialState": "{MemberExpression}"
+          }
+        },
+        {
+          "file": "src\\features\\explore\\components\\PostModal.tsx",
+          "line": 27,
+          "code": "const [showDropdown, setShowDropdown] = useState(false);",
+          "context": "PostModal",
+          "destructuring": [
+            "showDropdown",
+            "setShowDropdown"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\explore\\hooks\\useExplore.ts",
+          "line": 8,
+          "code": "const [posts, setPosts] = useState<ExplorePost[]>([]);",
+          "context": "useExplore",
+          "destructuring": [
+            "posts",
+            "setPosts"
+          ],
+          "parameters": [
+            "[]"
+          ],
+          "defaults": {
+            "initialArray": "[]"
+          }
+        },
+        {
+          "file": "src\\features\\explore\\hooks\\useExplore.ts",
+          "line": 9,
+          "code": "const [isLoading, setIsLoading] = useState(true);",
+          "context": "useExplore",
+          "destructuring": [
+            "isLoading",
+            "setIsLoading"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\explore\\hooks\\useExplore.ts",
+          "line": 10,
+          "code": "const [hasMore, setHasMore] = useState(true);",
+          "context": "useExplore",
+          "destructuring": [
+            "hasMore",
+            "setHasMore"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\explore\\hooks\\useExplore.ts",
+          "line": 11,
+          "code": "const [page, setPage] = useState(1);",
+          "context": "useExplore",
+          "destructuring": [
+            "page",
+            "setPage"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\explore\\hooks\\useExplore.ts",
+          "line": 12,
+          "code": "const [searchQuery, setSearchQuery] = useState(\"\");",
+          "context": "useExplore",
+          "destructuring": [
+            "searchQuery",
+            "setSearchQuery"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\explore\\hooks\\useSearch.ts",
+          "line": 6,
+          "code": "const [query, setQuery] = useState(\"\");",
+          "context": "useSearch",
+          "destructuring": [
+            "query",
+            "setQuery"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\explore\\hooks\\useSearch.ts",
+          "line": 7,
+          "code": "const [isTyping, setIsTyping] = useState(false);",
+          "context": "useSearch",
+          "destructuring": [
+            "isTyping",
+            "setIsTyping"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\dashboard\\hooks\\useDashboard.ts",
+          "line": 8,
+          "code": "const [activeTab, setActiveTab] = useState<TabType>(\"home\");",
+          "context": "useDashboard",
+          "destructuring": [
+            "activeTab",
+            "setActiveTab"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\dashboard\\hooks\\useMobileDetect.ts",
+          "line": 6,
+          "code": "const [isMobile, setIsMobile] = useState(false);",
+          "context": "useMobileDetect",
+          "destructuring": [
+            "isMobile",
+            "setIsMobile"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\dashboard\\hooks\\useTheme.ts",
+          "line": 7,
+          "code": "const [isDarkMode, setIsDarkMode] = useState(false);",
+          "context": "useTheme",
+          "destructuring": [
+            "isDarkMode",
+            "setIsDarkMode"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\dashboard\\hooks\\useTheme.ts",
+          "line": 8,
+          "code": "const [mounted, setMounted] = useState(false);",
+          "context": "useTheme",
+          "destructuring": [
+            "mounted",
+            "setMounted"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateLayout.tsx",
+          "line": 11,
+          "code": "const [activeType, setActiveType] = useState<CreateType>(\"post\");",
+          "context": "CreateLayout",
+          "destructuring": [
+            "activeType",
+            "setActiveType"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreatePost.tsx",
+          "line": 25,
+          "code": "const [selectedImages, setSelectedImages] = useState<string[]>([]);",
+          "context": "CreatePost",
+          "destructuring": [
+            "selectedImages",
+            "setSelectedImages"
+          ],
+          "parameters": [
+            "[]"
+          ],
+          "defaults": {
+            "initialArray": "[]"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreatePost.tsx",
+          "line": 26,
+          "code": "const [currentImageIndex, setCurrentImageIndex] = useState(0);",
+          "context": "CreatePost",
+          "destructuring": [
+            "currentImageIndex",
+            "setCurrentImageIndex"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreatePost.tsx",
+          "line": 27,
+          "code": "const [caption, setCaption] = useState(\"\");",
+          "context": "CreatePost",
+          "destructuring": [
+            "caption",
+            "setCaption"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreatePost.tsx",
+          "line": 28,
+          "code": "const [location, setLocation] = useState(\"\");",
+          "context": "CreatePost",
+          "destructuring": [
+            "location",
+            "setLocation"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreatePost.tsx",
+          "line": 29,
+          "code": "const [hashtags, setHashtags] = useState(\"\");",
+          "context": "CreatePost",
+          "destructuring": [
+            "hashtags",
+            "setHashtags"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreatePost.tsx",
+          "line": 30,
+          "code": "const [isUploading, setIsUploading] = useState(false);",
+          "context": "CreatePost",
+          "destructuring": [
+            "isUploading",
+            "setIsUploading"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreatePost.tsx",
+          "line": 31,
+          "code": "const [showEditor, setShowEditor] = useState(false);",
+          "context": "CreatePost",
+          "destructuring": [
+            "showEditor",
+            "setShowEditor"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreatePost.tsx",
+          "line": 32,
+          "code": "const [postSettings, setPostSettings] = useState<PostSettings>({",
+          "context": "CreatePost",
+          "destructuring": [
+            "postSettings",
+            "setPostSettings"
+          ],
+          "parameters": [
+            "{disableComments: ..., disableLikes: ..., allowSharing: true, ageRestriction: ...}"
+          ],
+          "defaults": {
+            "disableComments": "...",
+            "disableLikes": "...",
+            "allowSharing": "true",
+            "ageRestriction": "..."
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 53,
+          "code": "const [storyImage, setStoryImage] = useState<string | null>(null);",
+          "context": "CreateStory",
+          "destructuring": [
+            "storyImage",
+            "setStoryImage"
+          ],
+          "parameters": [
+            "{NullLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NullLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 54,
+          "code": "const [originalImage, setOriginalImage] = useState<string | null>(null);",
+          "context": "CreateStory",
+          "destructuring": [
+            "originalImage",
+            "setOriginalImage"
+          ],
+          "parameters": [
+            "{NullLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NullLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 55,
+          "code": "const [text, setText] = useState(\"\");",
+          "context": "CreateStory",
+          "destructuring": [
+            "text",
+            "setText"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 56,
+          "code": "const [textLayers, setTextLayers] = useState<TextLayer[]>([]);",
+          "context": "CreateStory",
+          "destructuring": [
+            "textLayers",
+            "setTextLayers"
+          ],
+          "parameters": [
+            "[]"
+          ],
+          "defaults": {
+            "initialArray": "[]"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 57,
+          "code": "const [backgroundColor, setBackgroundColor] = useState(\"#6366f1\");",
+          "context": "CreateStory",
+          "destructuring": [
+            "backgroundColor",
+            "setBackgroundColor"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 58,
+          "code": "const [isUploading, setIsUploading] = useState(false);",
+          "context": "CreateStory",
+          "destructuring": [
+            "isUploading",
+            "setIsUploading"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 59,
+          "code": "const [activeTab, setActiveTab] = useState<\"edit\" | \"text\" | \"stickers\" | \"music\" | \"links\">(\"edit\");",
+          "context": "CreateStory",
+          "destructuring": [
+            "activeTab",
+            "setActiveTab"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 60,
+          "code": "const [brightness, setBrightness] = useState(0);",
+          "context": "CreateStory",
+          "destructuring": [
+            "brightness",
+            "setBrightness"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 61,
+          "code": "const [contrast, setContrast] = useState(0);",
+          "context": "CreateStory",
+          "destructuring": [
+            "contrast",
+            "setContrast"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 62,
+          "code": "const [saturation, setSaturation] = useState(0);",
+          "context": "CreateStory",
+          "destructuring": [
+            "saturation",
+            "setSaturation"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 63,
+          "code": "const [temperature, setTemperature] = useState(0);",
+          "context": "CreateStory",
+          "destructuring": [
+            "temperature",
+            "setTemperature"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 64,
+          "code": "const [filter, setFilter] = useState(\"normal\");",
+          "context": "CreateStory",
+          "destructuring": [
+            "filter",
+            "setFilter"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 65,
+          "code": "const [zoom, setZoom] = useState(1);",
+          "context": "CreateStory",
+          "destructuring": [
+            "zoom",
+            "setZoom"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 66,
+          "code": "const [rotation, setRotation] = useState(0);",
+          "context": "CreateStory",
+          "destructuring": [
+            "rotation",
+            "setRotation"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 67,
+          "code": "const [link, setLink] = useState<LinkItem | null>(null);",
+          "context": "CreateStory",
+          "destructuring": [
+            "link",
+            "setLink"
+          ],
+          "parameters": [
+            "{NullLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NullLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 68,
+          "code": "const [showLinkInput, setShowLinkInput] = useState(false);",
+          "context": "CreateStory",
+          "destructuring": [
+            "showLinkInput",
+            "setShowLinkInput"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 69,
+          "code": "const [linkUrl, setLinkUrl] = useState(\"\");",
+          "context": "CreateStory",
+          "destructuring": [
+            "linkUrl",
+            "setLinkUrl"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 70,
+          "code": "const [linkTitle, setLinkTitle] = useState(\"\");",
+          "context": "CreateStory",
+          "destructuring": [
+            "linkTitle",
+            "setLinkTitle"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 71,
+          "code": "const [musicTrack, setMusicTrack] = useState<string | null>(null);",
+          "context": "CreateStory",
+          "destructuring": [
+            "musicTrack",
+            "setMusicTrack"
+          ],
+          "parameters": [
+            "{NullLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NullLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 72,
+          "code": "const [duration, setDuration] = useState(7);",
+          "context": "CreateStory",
+          "destructuring": [
+            "duration",
+            "setDuration"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 80,
+          "code": "const [showCamera, setShowCamera] = useState(false);",
+          "context": "streamRef",
+          "destructuring": [
+            "showCamera",
+            "setShowCamera"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 81,
+          "code": "const [cameraActive, setCameraActive] = useState(false);",
+          "context": "streamRef",
+          "destructuring": [
+            "cameraActive",
+            "setCameraActive"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\ImageEditor.tsx",
+          "line": 23,
+          "code": "const [editedImage, setEditedImage] = useState(imageUrl);",
+          "context": "ImageEditor",
+          "destructuring": [
+            "editedImage",
+            "setEditedImage"
+          ],
+          "parameters": [
+            "imageUrl"
+          ],
+          "defaults": {
+            "variable": "imageUrl"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\ImageEditor.tsx",
+          "line": 24,
+          "code": "const [activeTab, setActiveTab] = useState<\"adjust\" | \"rotate\">(\"adjust\");",
+          "context": "ImageEditor",
+          "destructuring": [
+            "activeTab",
+            "setActiveTab"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\ImageEditor.tsx",
+          "line": 25,
+          "code": "const [brightness, setBrightness] = useState(0);",
+          "context": "ImageEditor",
+          "destructuring": [
+            "brightness",
+            "setBrightness"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\ImageEditor.tsx",
+          "line": 26,
+          "code": "const [contrast, setContrast] = useState(0);",
+          "context": "ImageEditor",
+          "destructuring": [
+            "contrast",
+            "setContrast"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\ImageEditor.tsx",
+          "line": 27,
+          "code": "const [saturation, setSaturation] = useState(0);",
+          "context": "ImageEditor",
+          "destructuring": [
+            "saturation",
+            "setSaturation"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\ImageEditor.tsx",
+          "line": 28,
+          "code": "const [temperature, setTemperature] = useState(0);",
+          "context": "ImageEditor",
+          "destructuring": [
+            "temperature",
+            "setTemperature"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\ImageEditor.tsx",
+          "line": 29,
+          "code": "const [isProcessing, setIsProcessing] = useState(false);",
+          "context": "ImageEditor",
+          "destructuring": [
+            "isProcessing",
+            "setIsProcessing"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\LinkInput.tsx",
+          "line": 14,
+          "code": "const [url, setUrl] = useState(existingLink?.url || \"\");",
+          "context": "LinkInput",
+          "destructuring": [
+            "url",
+            "setUrl"
+          ],
+          "parameters": [
+            "{LogicalExpression}"
+          ],
+          "defaults": {
+            "initialState": "{LogicalExpression}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\LinkInput.tsx",
+          "line": 15,
+          "code": "const [title, setTitle] = useState(existingLink?.title || \"\");",
+          "context": "LinkInput",
+          "destructuring": [
+            "title",
+            "setTitle"
+          ],
+          "parameters": [
+            "{LogicalExpression}"
+          ],
+          "defaults": {
+            "initialState": "{LogicalExpression}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\LinkInput.tsx",
+          "line": 16,
+          "code": "const [displayType, setDisplayType] = useState<\"button\" | \"text\" | \"swipe\">(",
+          "context": "LinkInput",
+          "destructuring": [
+            "displayType",
+            "setDisplayType"
+          ],
+          "parameters": [
+            "{LogicalExpression}"
+          ],
+          "defaults": {
+            "initialState": "{LogicalExpression}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\LinkInput.tsx",
+          "line": 19,
+          "code": "const [isValid, setIsValid] = useState(false);",
+          "context": "LinkInput",
+          "destructuring": [
+            "isValid",
+            "setIsValid"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\LinkInput.tsx",
+          "line": 20,
+          "code": "const [isChecking, setIsChecking] = useState(false);",
+          "context": "LinkInput",
+          "destructuring": [
+            "isChecking",
+            "setIsChecking"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\TextOverlay.tsx",
+          "line": 13,
+          "code": "const [text, setText] = useState(\"\");",
+          "context": "TextOverlay",
+          "destructuring": [
+            "text",
+            "setText"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\TextOverlay.tsx",
+          "line": 14,
+          "code": "const [fontSize, setFontSize] = useState(32);",
+          "context": "TextOverlay",
+          "destructuring": [
+            "fontSize",
+            "setFontSize"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\TextOverlay.tsx",
+          "line": 15,
+          "code": "const [color, setColor] = useState(\"#FFFFFF\");",
+          "context": "TextOverlay",
+          "destructuring": [
+            "color",
+            "setColor"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useImageEditor.ts",
+          "line": 8,
+          "code": "const [originalImage, setOriginalImage] = useState<string | null>(null);",
+          "context": "useImageEditor",
+          "destructuring": [
+            "originalImage",
+            "setOriginalImage"
+          ],
+          "parameters": [
+            "{NullLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NullLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useImageEditor.ts",
+          "line": 9,
+          "code": "const [editedImage, setEditedImage] = useState<string | null>(null);",
+          "context": "useImageEditor",
+          "destructuring": [
+            "editedImage",
+            "setEditedImage"
+          ],
+          "parameters": [
+            "{NullLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NullLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useImageEditor.ts",
+          "line": 10,
+          "code": "const [aspectRatio, setAspectRatio] = useState<AspectRatio>(\"1:1\");",
+          "context": "useImageEditor",
+          "destructuring": [
+            "aspectRatio",
+            "setAspectRatio"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useImageEditor.ts",
+          "line": 11,
+          "code": "const [filter, setFilter] = useState<FilterType>(\"normal\");",
+          "context": "useImageEditor",
+          "destructuring": [
+            "filter",
+            "setFilter"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useImageEditor.ts",
+          "line": 12,
+          "code": "const [zoom, setZoom] = useState(1);",
+          "context": "useImageEditor",
+          "destructuring": [
+            "zoom",
+            "setZoom"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useImageEditor.ts",
+          "line": 13,
+          "code": "const [brightness, setBrightness] = useState(0);",
+          "context": "useImageEditor",
+          "destructuring": [
+            "brightness",
+            "setBrightness"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useImageEditor.ts",
+          "line": 14,
+          "code": "const [contrast, setContrast] = useState(0);",
+          "context": "useImageEditor",
+          "destructuring": [
+            "contrast",
+            "setContrast"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useImageEditor.ts",
+          "line": 15,
+          "code": "const [saturation, setSaturation] = useState(0);",
+          "context": "useImageEditor",
+          "destructuring": [
+            "saturation",
+            "setSaturation"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useImageEditor.ts",
+          "line": 16,
+          "code": "const [temperature, setTemperature] = useState(0);",
+          "context": "useImageEditor",
+          "destructuring": [
+            "temperature",
+            "setTemperature"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useImageEditor.ts",
+          "line": 17,
+          "code": "const [vignette, setVignette] = useState(0);",
+          "context": "useImageEditor",
+          "destructuring": [
+            "vignette",
+            "setVignette"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useImageUpload.ts",
+          "line": 24,
+          "code": "const [files, setFiles] = useState<File[]>([]);",
+          "context": "useImageUpload",
+          "destructuring": [
+            "files",
+            "setFiles"
+          ],
+          "parameters": [
+            "[]"
+          ],
+          "defaults": {
+            "initialArray": "[]"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useImageUpload.ts",
+          "line": 25,
+          "code": "const [previews, setPreviews] = useState<string[]>([]);",
+          "context": "useImageUpload",
+          "destructuring": [
+            "previews",
+            "setPreviews"
+          ],
+          "parameters": [
+            "[]"
+          ],
+          "defaults": {
+            "initialArray": "[]"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useImageUpload.ts",
+          "line": 26,
+          "code": "const [isUploading, setIsUploading] = useState(false);",
+          "context": "useImageUpload",
+          "destructuring": [
+            "isUploading",
+            "setIsUploading"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useImageUpload.ts",
+          "line": 27,
+          "code": "const [uploadProgress, setUploadProgress] = useState<number[]>([]);",
+          "context": "useImageUpload",
+          "destructuring": [
+            "uploadProgress",
+            "setUploadProgress"
+          ],
+          "parameters": [
+            "[]"
+          ],
+          "defaults": {
+            "initialArray": "[]"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useStoryEditor.ts",
+          "line": 25,
+          "code": "const [image, setImage] = useState<string | null>(null);",
+          "context": "useStoryEditor",
+          "destructuring": [
+            "image",
+            "setImage"
+          ],
+          "parameters": [
+            "{NullLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NullLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useStoryEditor.ts",
+          "line": 26,
+          "code": "const [textLayers, setTextLayers] = useState<TextLayer[]>([]);",
+          "context": "useStoryEditor",
+          "destructuring": [
+            "textLayers",
+            "setTextLayers"
+          ],
+          "parameters": [
+            "[]"
+          ],
+          "defaults": {
+            "initialArray": "[]"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useStoryEditor.ts",
+          "line": 27,
+          "code": "const [settings, setSettings] = useState<StorySettings>({",
+          "context": "useStoryEditor",
+          "destructuring": [
+            "settings",
+            "setSettings"
+          ],
+          "parameters": [
+            "{duration: 7, allowComments: true, allowSharing: true, saveToGallery: ...}"
+          ],
+          "defaults": {
+            "duration": "7",
+            "allowComments": "true",
+            "allowSharing": "true",
+            "saveToGallery": "..."
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useStoryEditor.ts",
+          "line": 33,
+          "code": "const [brightness, setBrightness] = useState(0);",
+          "context": "useStoryEditor",
+          "destructuring": [
+            "brightness",
+            "setBrightness"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useStoryEditor.ts",
+          "line": 34,
+          "code": "const [contrast, setContrast] = useState(0);",
+          "context": "useStoryEditor",
+          "destructuring": [
+            "contrast",
+            "setContrast"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useStoryEditor.ts",
+          "line": 35,
+          "code": "const [saturation, setSaturation] = useState(0);",
+          "context": "useStoryEditor",
+          "destructuring": [
+            "saturation",
+            "setSaturation"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useStoryEditor.ts",
+          "line": 36,
+          "code": "const [temperature, setTemperature] = useState(0);",
+          "context": "useStoryEditor",
+          "destructuring": [
+            "temperature",
+            "setTemperature"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useStoryEditor.ts",
+          "line": 37,
+          "code": "const [selectedFilter, setSelectedFilter] = useState(\"normal\");",
+          "context": "useStoryEditor",
+          "destructuring": [
+            "selectedFilter",
+            "setSelectedFilter"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\notifications\\hooks\\useNotifications.ts",
+          "line": 105,
+          "code": "const [activeTab, setActiveTab] = useState<NotificationTabType>(\"all\");",
+          "context": "useNotifications",
+          "destructuring": [
+            "activeTab",
+            "setActiveTab"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\notifications\\hooks\\useNotifications.ts",
+          "line": 106,
+          "code": "const [notifications, setNotifications] = useState<Notification[]>(mockNotifications);",
+          "context": "useNotifications",
+          "destructuring": [
+            "notifications",
+            "setNotifications"
+          ],
+          "parameters": [
+            "mockNotifications"
+          ],
+          "defaults": {
+            "variable": "mockNotifications"
+          }
+        },
+        {
+          "file": "src\\features\\post\\components\\PostCard.tsx",
+          "line": 25,
+          "code": "const [comments, setComments] = useState<Comment[]>([",
+          "context": "PostCard",
+          "destructuring": [
+            "comments",
+            "setComments"
+          ],
+          "parameters": [
+            "[{...}, {...}]"
+          ],
+          "defaults": {
+            "initialArray": "[{...}, {...}]"
+          }
+        },
+        {
+          "file": "src\\features\\post\\components\\PostCard.tsx",
+          "line": 42,
+          "code": "const [isLiked, setIsLiked] = useState(post.isLiked || false);",
+          "context": "PostCard",
+          "destructuring": [
+            "isLiked",
+            "setIsLiked"
+          ],
+          "parameters": [
+            "{LogicalExpression}"
+          ],
+          "defaults": {
+            "initialState": "{LogicalExpression}"
+          }
+        },
+        {
+          "file": "src\\features\\post\\components\\PostCard.tsx",
+          "line": 43,
+          "code": "const [isSaved, setIsSaved] = useState(post.isSaved || false);",
+          "context": "PostCard",
+          "destructuring": [
+            "isSaved",
+            "setIsSaved"
+          ],
+          "parameters": [
+            "{LogicalExpression}"
+          ],
+          "defaults": {
+            "initialState": "{LogicalExpression}"
+          }
+        },
+        {
+          "file": "src\\features\\post\\components\\PostCard.tsx",
+          "line": 44,
+          "code": "const [likesCount, setLikesCount] = useState(post.likes);",
+          "context": "PostCard",
+          "destructuring": [
+            "likesCount",
+            "setLikesCount"
+          ],
+          "parameters": [
+            "{MemberExpression}"
+          ],
+          "defaults": {
+            "initialState": "{MemberExpression}"
+          }
+        },
+        {
+          "file": "src\\features\\post\\components\\PostCard.tsx",
+          "line": 45,
+          "code": "const [showComments, setShowComments] = useState(false);",
+          "context": "global",
+          "destructuring": [
+            "showComments",
+            "setShowComments"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\post\\components\\PostComments.tsx",
+          "line": 26,
+          "code": "const [newComment, setNewComment] = useState(\"\");",
+          "context": "PostComments",
+          "destructuring": [
+            "newComment",
+            "setNewComment"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\post\\components\\PostComments.tsx",
+          "line": 27,
+          "code": "const [replyToId, setReplyToId] = useState<number | null>(null);",
+          "context": "PostComments",
+          "destructuring": [
+            "replyToId",
+            "setReplyToId"
+          ],
+          "parameters": [
+            "{NullLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NullLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\post\\components\\PostComments.tsx",
+          "line": 28,
+          "code": "const [replyText, setReplyText] = useState(\"\");",
+          "context": "PostComments",
+          "destructuring": [
+            "replyText",
+            "setReplyText"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\post\\components\\PostHeader.tsx",
+          "line": 16,
+          "code": "const [showDropdown, setShowDropdown] = useState(false);",
+          "context": "PostHeader",
+          "destructuring": [
+            "showDropdown",
+            "setShowDropdown"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\post\\components\\PostHeader.tsx",
+          "line": 17,
+          "code": "const [avatarError, setAvatarError] = useState(false);",
+          "context": "PostHeader",
+          "destructuring": [
+            "avatarError",
+            "setAvatarError"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\post\\components\\PostImage.tsx",
+          "line": 13,
+          "code": "const [imageError, setImageError] = useState(false);",
+          "context": "PostImage",
+          "destructuring": [
+            "imageError",
+            "setImageError"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\post\\hooks\\useComments.ts",
+          "line": 17,
+          "code": "const [comments, setComments] = useState<Comment[]>(initialComments);",
+          "context": "useComments",
+          "destructuring": [
+            "comments",
+            "setComments"
+          ],
+          "parameters": [
+            "initialComments"
+          ],
+          "defaults": {
+            "variable": "initialComments"
+          }
+        },
+        {
+          "file": "src\\features\\post\\hooks\\useComments.ts",
+          "line": 18,
+          "code": "const [isLoading, setIsLoading] = useState(false);",
+          "context": "useComments",
+          "destructuring": [
+            "isLoading",
+            "setIsLoading"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\post\\hooks\\useComments.ts",
+          "line": 19,
+          "code": "const [replyTo, setReplyTo] = useState<Comment | null>(null);",
+          "context": "useComments",
+          "destructuring": [
+            "replyTo",
+            "setReplyTo"
+          ],
+          "parameters": [
+            "{NullLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NullLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\post\\hooks\\usePostActions.ts",
+          "line": 16,
+          "code": "const [state, setState] = useState<PostActionState>({",
+          "context": "usePostActions",
+          "destructuring": [
+            "state",
+            "setState"
+          ],
+          "parameters": [
+            "{isLiked: ..., isSaved: ..., isBookmarked: ..., likesCount: ..., sharesCount: ..., viewsCount: ..., key: ...}"
+          ],
+          "defaults": {
+            "isLiked": "...",
+            "isSaved": "...",
+            "isBookmarked": "...",
+            "likesCount": "...",
+            "sharesCount": "...",
+            "viewsCount": "...",
+            "key": "..."
+          }
+        },
+        {
+          "file": "src\\features\\post\\hooks\\usePostActions.ts",
+          "line": 26,
+          "code": "const [isProcessing, setIsProcessing] = useState(false);",
+          "context": "usePostActions",
+          "destructuring": [
+            "isProcessing",
+            "setIsProcessing"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\post\\hooks\\usePosts.ts",
+          "line": 58,
+          "code": "const [posts, setPosts] = useState<Post[]>([]);",
+          "context": "usePosts",
+          "destructuring": [
+            "posts",
+            "setPosts"
+          ],
+          "parameters": [
+            "[]"
+          ],
+          "defaults": {
+            "initialArray": "[]"
+          }
+        },
+        {
+          "file": "src\\features\\post\\hooks\\usePosts.ts",
+          "line": 59,
+          "code": "const [isLoading, setIsLoading] = useState(true);",
+          "context": "usePosts",
+          "destructuring": [
+            "isLoading",
+            "setIsLoading"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\profile\\components\\ProfileActions.tsx",
+          "line": 15,
+          "code": "const [copied, setCopied] = useState(false);",
+          "context": "ProfileActions",
+          "destructuring": [
+            "copied",
+            "setCopied"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\profile\\hooks\\useProfile.ts",
+          "line": 9,
+          "code": "const [user, setUser] = useState<ProfileUser | null>(null);",
+          "context": "useProfile",
+          "destructuring": [
+            "user",
+            "setUser"
+          ],
+          "parameters": [
+            "{NullLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NullLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\profile\\hooks\\useProfile.ts",
+          "line": 10,
+          "code": "const [stats, setStats] = useState<ProfileStats | null>(null);",
+          "context": "useProfile",
+          "destructuring": [
+            "stats",
+            "setStats"
+          ],
+          "parameters": [
+            "{NullLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NullLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\profile\\hooks\\useProfile.ts",
+          "line": 11,
+          "code": "const [isLoading, setIsLoading] = useState(true);",
+          "context": "useProfile",
+          "destructuring": [
+            "isLoading",
+            "setIsLoading"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\profile\\hooks\\useProfile.ts",
+          "line": 12,
+          "code": "const [isFollowing, setIsFollowing] = useState(false);",
+          "context": "useProfile",
+          "destructuring": [
+            "isFollowing",
+            "setIsFollowing"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\profile\\hooks\\useProfilePosts.ts",
+          "line": 8,
+          "code": "const [activeTab, setActiveTab] = useState<TabType>(\"posts\");",
+          "context": "useProfilePosts",
+          "destructuring": [
+            "activeTab",
+            "setActiveTab"
+          ],
+          "parameters": [
+            "{StringLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{StringLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\profile\\hooks\\useProfilePosts.ts",
+          "line": 9,
+          "code": "const [posts, setPosts] = useState<ProfilePost[]>([]);",
+          "context": "useProfilePosts",
+          "destructuring": [
+            "posts",
+            "setPosts"
+          ],
+          "parameters": [
+            "[]"
+          ],
+          "defaults": {
+            "initialArray": "[]"
+          }
+        },
+        {
+          "file": "src\\features\\profile\\hooks\\useProfilePosts.ts",
+          "line": 10,
+          "code": "const [isLoading, setIsLoading] = useState(true);",
+          "context": "useProfilePosts",
+          "destructuring": [
+            "isLoading",
+            "setIsLoading"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\settings\\hooks\\useTheme.ts",
+          "line": 7,
+          "code": "const [isDarkMode, setIsDarkMode] = useState(false);",
+          "context": "useTheme",
+          "destructuring": [
+            "isDarkMode",
+            "setIsDarkMode"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\components\\StoriesList.tsx",
+          "line": 23,
+          "code": "const [showLeftButton, setShowLeftButton] = useState(false);",
+          "context": "scrollContainerRef",
+          "destructuring": [
+            "showLeftButton",
+            "setShowLeftButton"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\components\\StoriesList.tsx",
+          "line": 24,
+          "code": "const [showRightButton, setShowRightButton] = useState(true);",
+          "context": "scrollContainerRef",
+          "destructuring": [
+            "showRightButton",
+            "setShowRightButton"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\components\\StoriesList.tsx",
+          "line": 25,
+          "code": "const [imageErrors, setImageErrors] = useState<Record<number, boolean>>({});",
+          "context": "scrollContainerRef",
+          "destructuring": [
+            "imageErrors",
+            "setImageErrors"
+          ],
+          "parameters": [
+            "{}"
+          ],
+          "defaults": {
+            "initialState": "{}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\components\\StoryActions.tsx",
+          "line": 28,
+          "code": "const [isLiked, setIsLiked] = useState(false);",
+          "context": "StoryActions",
+          "destructuring": [
+            "isLiked",
+            "setIsLiked"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\components\\StoryActions.tsx",
+          "line": 29,
+          "code": "const [isSaved, setIsSaved] = useState(false);",
+          "context": "StoryActions",
+          "destructuring": [
+            "isSaved",
+            "setIsSaved"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\components\\StoryActions.tsx",
+          "line": 30,
+          "code": "const [showMore, setShowMore] = useState(false);",
+          "context": "StoryActions",
+          "destructuring": [
+            "showMore",
+            "setShowMore"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\components\\StoryActions.tsx",
+          "line": 31,
+          "code": "const [likesCount, setLikesCount] = useState(0);",
+          "context": "StoryActions",
+          "destructuring": [
+            "likesCount",
+            "setLikesCount"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\components\\StoryHeader.tsx",
+          "line": 24,
+          "code": "const [imageError, setImageError] = useState(false);",
+          "context": "StoryHeader",
+          "destructuring": [
+            "imageError",
+            "setImageError"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\components\\StoryViewer.tsx",
+          "line": 25,
+          "code": "const [progress, setProgress] = useState(0);",
+          "context": "StoryViewer",
+          "destructuring": [
+            "progress",
+            "setProgress"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\components\\StoryViewer.tsx",
+          "line": 26,
+          "code": "const [isPaused, setIsPaused] = useState(false);",
+          "context": "StoryViewer",
+          "destructuring": [
+            "isPaused",
+            "setIsPaused"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\components\\StoryViewer.tsx",
+          "line": 27,
+          "code": "const [imageError, setImageError] = useState(false);",
+          "context": "StoryViewer",
+          "destructuring": [
+            "imageError",
+            "setImageError"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\components\\StoryViewer.tsx",
+          "line": 28,
+          "code": "const [isMuted, setIsMuted] = useState(true);",
+          "context": "StoryViewer",
+          "destructuring": [
+            "isMuted",
+            "setIsMuted"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\components\\StoryViewer.tsx",
+          "line": 29,
+          "code": "const [isLiked, setIsLiked] = useState(false);",
+          "context": "StoryViewer",
+          "destructuring": [
+            "isLiked",
+            "setIsLiked"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\components\\ViewerList.tsx",
+          "line": 14,
+          "code": "const [isExpanded, setIsExpanded] = useState(false);",
+          "context": "ViewerList",
+          "destructuring": [
+            "isExpanded",
+            "setIsExpanded"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\hooks\\useStories.ts",
+          "line": 80,
+          "code": "const [stories, setStories] = useState<Story[]>(mockStories);",
+          "context": "useStories",
+          "destructuring": [
+            "stories",
+            "setStories"
+          ],
+          "parameters": [
+            "mockStories"
+          ],
+          "defaults": {
+            "variable": "mockStories"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\hooks\\useStories.ts",
+          "line": 81,
+          "code": "const [selectedStoryIndex, setSelectedStoryIndex] = useState<number | null>(null);",
+          "context": "useStories",
+          "destructuring": [
+            "selectedStoryIndex",
+            "setSelectedStoryIndex"
+          ],
+          "parameters": [
+            "{NullLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NullLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\hooks\\useStories.ts",
+          "line": 82,
+          "code": "const [isOpen, setIsOpen] = useState(false);",
+          "context": "useStories",
+          "destructuring": [
+            "isOpen",
+            "setIsOpen"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\hooks\\useStoryTimer.ts",
+          "line": 31,
+          "code": "const [progress, setProgress] = useState(0);",
+          "context": "useStoryTimer",
+          "destructuring": [
+            "progress",
+            "setProgress"
+          ],
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\hooks\\useStoryTimer.ts",
+          "line": 32,
+          "code": "const [isPlaying, setIsPlaying] = useState(autoPlay);",
+          "context": "useStoryTimer",
+          "destructuring": [
+            "isPlaying",
+            "setIsPlaying"
+          ],
+          "parameters": [
+            "autoPlay"
+          ],
+          "defaults": {
+            "variable": "autoPlay"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\hooks\\useStoryTimer.ts",
+          "line": 33,
+          "code": "const [isPaused, setIsPaused] = useState(false);",
+          "context": "useStoryTimer",
+          "destructuring": [
+            "isPaused",
+            "setIsPaused"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\hooks\\useStoryTimer.ts",
+          "line": 34,
+          "code": "const [isCompleted, setIsCompleted] = useState(false);",
+          "context": "useStoryTimer",
+          "destructuring": [
+            "isCompleted",
+            "setIsCompleted"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\utils\\stories.utils.ts",
+          "line": 16,
+          "code": "const [stories, setStories] = useState<Story[]>([",
+          "context": "useStories",
+          "destructuring": [
+            "stories",
+            "setStories"
+          ],
+          "parameters": [
+            "[...]"
+          ],
+          "defaults": {
+            "initialArray": "[...]"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\utils\\stories.utils.ts",
+          "line": 80,
+          "code": "const [selectedStoryIndex, setSelectedStoryIndex] = useState<number | null>(null);",
+          "context": "global",
+          "destructuring": [
+            "selectedStoryIndex",
+            "setSelectedStoryIndex"
+          ],
+          "parameters": [
+            "{NullLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NullLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\utils\\stories.utils.ts",
+          "line": 81,
+          "code": "const [isOpen, setIsOpen] = useState(false);",
+          "context": "global",
+          "destructuring": [
+            "isOpen",
+            "setIsOpen"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        },
+        {
+          "file": "src\\app\\dashboard\\tabs\\@profile\\page.tsx",
+          "line": 18,
+          "code": "const [isSettingsOpen, setIsSettingsOpen] = useState(false);",
+          "context": "ProfilePage",
+          "destructuring": [
+            "isSettingsOpen",
+            "setIsSettingsOpen"
+          ],
+          "parameters": [
+            "{BooleanLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{BooleanLiteral}"
+          }
+        }
+      ],
+      "isBuiltInHook": true,
+      "hookCategory": "state",
+      "jsdoc": {
+        "description": "Returns a stateful value and a function to update it",
+        "params": [
+          {
+            "name": "initialState",
+            "type": "T | (() => T)",
+            "description": "The initial state value or lazy initial state function"
+          }
+        ],
+        "returns": {
+          "type": "[T, Dispatch<SetStateAction<T>>]",
+          "description": "A tuple with the current state value and a setter function"
+        }
+      }
+    },
+    {
+      "displayName": "useCallback",
+      "filePath": "React Built-in",
+      "description": "Returns a memoized callback function",
+      "type": "hook",
+      "props": [],
+      "hookUsages": [
+        {
+          "file": "src\\features\\auth\\hooks\\useAuth.ts",
+          "line": 15,
+          "code": "const handleSendOtp = useCallback(async (userPhone: string) => {",
+          "context": "handleSendOtp",
+          "parameters": [
+            "() => {...}",
+            "[]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[]"
+          }
+        },
+        {
+          "file": "src\\features\\auth\\hooks\\useAuth.ts",
+          "line": 33,
+          "code": "const handleVerifyOtp = useCallback(async (code: string) => {",
+          "context": "handleVerifyOtp",
+          "parameters": [
+            "() => {...}",
+            "[phone, router]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[phone, router]"
+          }
+        },
+        {
+          "file": "src\\features\\auth\\hooks\\useAuth.ts",
+          "line": 52,
+          "code": "const handleBack = useCallback(() => {",
+          "context": "handleBack",
+          "parameters": [
+            "() => {...}",
+            "[]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[]"
+          }
+        },
+        {
+          "file": "src\\features\\auth\\hooks\\useOtpTimer.ts",
+          "line": 26,
+          "code": "const resetTimer = useCallback(() => {",
+          "context": "resetTimer",
+          "parameters": [
+            "() => {...}",
+            "[initialTime]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[initialTime]"
+          }
+        },
+        {
+          "file": "src\\features\\auth\\hooks\\usePhoneValidation.ts",
+          "line": 10,
+          "code": "const validatePhone = useCallback((value: string) => {",
+          "context": "validatePhone",
+          "parameters": [
+            "() => {...}",
+            "[]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[]"
+          }
+        },
+        {
+          "file": "src\\features\\explore\\hooks\\useExplore.ts",
+          "line": 14,
+          "code": "const fetchPosts = useCallback(async (pageNum: number, reset: boolean = false) => {",
+          "context": "fetchPosts",
+          "parameters": [
+            "() => {...}",
+            "[]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[]"
+          }
+        },
+        {
+          "file": "src\\features\\explore\\hooks\\useExplore.ts",
+          "line": 45,
+          "code": "const loadMore = useCallback(() => {",
+          "context": "loadMore",
+          "parameters": [
+            "() => {...}",
+            "[...]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[...]"
+          }
+        },
+        {
+          "file": "src\\features\\explore\\hooks\\useSearch.ts",
+          "line": 18,
+          "code": "const handleChange = useCallback((value: string) => {",
+          "context": "handleChange",
+          "parameters": [
+            "() => {...}",
+            "[]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[]"
+          }
+        },
+        {
+          "file": "src\\features\\explore\\hooks\\useSearch.ts",
+          "line": 23,
+          "code": "const handleClear = useCallback(() => {",
+          "context": "handleClear",
+          "parameters": [
+            "() => {...}",
+            "[onSearch]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[onSearch]"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\ImageEditor.tsx",
+          "line": 32,
+          "code": "const applyEdits = useCallback(async () => {",
+          "context": "applyEdits",
+          "parameters": [
+            "() => {...}",
+            "[...]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[...]"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useImageUpload.ts",
+          "line": 41,
+          "code": "const addFiles = useCallback(",
+          "context": "addFiles",
+          "parameters": [
+            "() => {...}",
+            "[{...}, maxFiles]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[{...}, maxFiles]"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useImageUpload.ts",
+          "line": 83,
+          "code": "const uploadFiles = useCallback(async () => {",
+          "context": "uploadFiles",
+          "parameters": [
+            "() => {...}",
+            "[files, convertToWebP, webpQuality]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[files, convertToWebP, webpQuality]"
+          }
+        },
+        {
+          "file": "src\\features\\create\\hooks\\useStoryEditor.ts",
+          "line": 58,
+          "code": "const applyEdits = useCallback(async () => {",
+          "context": "applyEdits",
+          "parameters": [
+            "() => {...}",
+            "[...]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[...]"
+          }
+        },
+        {
+          "file": "src\\features\\post\\hooks\\usePostActions.ts",
+          "line": 29,
+          "code": "const toggleLike = useCallback(async (postId: number) => {",
+          "context": "toggleLike",
+          "parameters": [
+            "() => {...}",
+            "[{...}, isProcessing]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[{...}, isProcessing]"
+          }
+        },
+        {
+          "file": "src\\features\\post\\hooks\\usePostActions.ts",
+          "line": 55,
+          "code": "const toggleSave = useCallback(async (postId: number) => {",
+          "context": "toggleSave",
+          "parameters": [
+            "() => {...}",
+            "[{...}, isProcessing]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[{...}, isProcessing]"
+          }
+        },
+        {
+          "file": "src\\features\\post\\hooks\\usePostActions.ts",
+          "line": 76,
+          "code": "const toggleBookmark = useCallback(async (postId: number) => {",
+          "context": "toggleBookmark",
+          "parameters": [
+            "() => {...}",
+            "[{...}, isProcessing]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[{...}, isProcessing]"
+          }
+        },
+        {
+          "file": "src\\features\\post\\hooks\\usePostActions.ts",
+          "line": 97,
+          "code": "const sharePost = useCallback(async (postId: number, platform?: string) => {",
+          "context": "sharePost",
+          "parameters": [
+            "() => {...}",
+            "[isProcessing]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[isProcessing]"
+          }
+        },
+        {
+          "file": "src\\features\\post\\hooks\\usePostActions.ts",
+          "line": 138,
+          "code": "const reportPost = useCallback(async (postId: number, reason: string) => {",
+          "context": "reportPost",
+          "parameters": [
+            "() => {...}",
+            "[isProcessing]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[isProcessing]"
+          }
+        },
+        {
+          "file": "src\\features\\post\\hooks\\usePostActions.ts",
+          "line": 152,
+          "code": "const blockUser = useCallback(async (username: string) => {",
+          "context": "blockUser",
+          "parameters": [
+            "() => {...}",
+            "[isProcessing]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[isProcessing]"
+          }
+        },
+        {
+          "file": "src\\features\\post\\hooks\\usePostActions.ts",
+          "line": 167,
+          "code": "const notInterested = useCallback(async (postId: number) => {",
+          "context": "notInterested",
+          "parameters": [
+            "() => {...}",
+            "[isProcessing]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[isProcessing]"
+          }
+        },
+        {
+          "file": "src\\features\\post\\hooks\\usePostActions.ts",
+          "line": 182,
+          "code": "const incrementView = useCallback(() => {",
+          "context": "incrementView",
+          "parameters": [
+            "() => {...}",
+            "[]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[]"
+          }
+        },
+        {
+          "file": "src\\features\\post\\hooks\\usePostActions.ts",
+          "line": 190,
+          "code": "const resetActions = useCallback(() => {",
+          "context": "resetActions",
+          "parameters": [
+            "() => {...}",
+            "[]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[]"
+          }
+        },
+        {
+          "file": "src\\features\\post\\hooks\\usePostActions.ts",
+          "line": 202,
+          "code": "const setPostState = useCallback((newState: Partial<PostActionState>) => {",
+          "context": "setPostState",
+          "parameters": [
+            "() => {...}",
+            "[]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[]"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\components\\StoryViewer.tsx",
+          "line": 103,
+          "code": "const handleNext = useCallback(() => {",
+          "context": "handleNext",
+          "parameters": [
+            "() => {...}",
+            "[hasNext, isPaused, onNext]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[hasNext, isPaused, onNext]"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\components\\StoryViewer.tsx",
+          "line": 109,
+          "code": "const handlePrev = useCallback(() => {",
+          "context": "handlePrev",
+          "parameters": [
+            "() => {...}",
+            "[hasPrev, isPaused, onPrev]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[hasPrev, isPaused, onPrev]"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\hooks\\useStories.ts",
+          "line": 101,
+          "code": "const nextStory = useCallback(() => {",
+          "context": "nextStory",
+          "parameters": [
+            "() => {...}",
+            "[selectedStoryIndex, stories]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[selectedStoryIndex, stories]"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\hooks\\useStories.ts",
+          "line": 124,
+          "code": "const prevStory = useCallback(() => {",
+          "context": "prevStory",
+          "parameters": [
+            "() => {...}",
+            "[selectedStoryIndex, stories]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[selectedStoryIndex, stories]"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\hooks\\useStoryTimer.ts",
+          "line": 42,
+          "code": "const stopAnimation = useCallback(() => {",
+          "context": "stopAnimation",
+          "parameters": [
+            "() => {...}",
+            "[]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[]"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\hooks\\useStoryTimer.ts",
+          "line": 50,
+          "code": "const startAnimation = useCallback(() => {",
+          "context": "startAnimation",
+          "parameters": [
+            "() => {...}",
+            "[...]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[...]"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\hooks\\useStoryTimer.ts",
+          "line": 78,
+          "code": "const reset = useCallback(() => {",
+          "context": "reset",
+          "parameters": [
+            "() => {...}",
+            "[autoPlay, startAnimation, stopAnimation]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[autoPlay, startAnimation, stopAnimation]"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\hooks\\useStoryTimer.ts",
+          "line": 92,
+          "code": "const start = useCallback(() => {",
+          "context": "start",
+          "parameters": [
+            "() => {...}",
+            "[isCompleted, reset, startAnimation]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[isCompleted, reset, startAnimation]"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\hooks\\useStoryTimer.ts",
+          "line": 103,
+          "code": "const pause = useCallback(() => {",
+          "context": "pause",
+          "parameters": [
+            "() => {...}",
+            "[isPlaying, isPaused, stopAnimation]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[isPlaying, isPaused, stopAnimation]"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\hooks\\useStoryTimer.ts",
+          "line": 115,
+          "code": "const resume = useCallback(() => {",
+          "context": "resume",
+          "parameters": [
+            "() => {...}",
+            "[isCompleted, isPlaying, startAnimation]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[isCompleted, isPlaying, startAnimation]"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\hooks\\useStoryTimer.ts",
+          "line": 124,
+          "code": "const seek = useCallback((percent: number) => {",
+          "context": "seek",
+          "parameters": [
+            "() => {...}",
+            "[...]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[...]"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\hooks\\useStoryTimer.ts",
+          "line": 136,
+          "code": "const skip = useCallback(() => {",
+          "context": "skip",
+          "parameters": [
+            "() => {...}",
+            "[isCompleted, onComplete, stopAnimation]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[isCompleted, onComplete, stopAnimation]"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\hooks\\useStoryTimer.ts",
+          "line": 147,
+          "code": "const previous = useCallback(() => {",
+          "context": "previous",
+          "parameters": [
+            "() => {...}",
+            "[reset]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[reset]"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\utils\\stories.utils.ts",
+          "line": 98,
+          "code": "const nextStory = useCallback(() => {",
+          "context": "nextStory",
+          "parameters": [
+            "() => {...}",
+            "[selectedStoryIndex, stories]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[selectedStoryIndex, stories]"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\utils\\stories.utils.ts",
+          "line": 119,
+          "code": "const prevStory = useCallback(() => {",
+          "context": "prevStory",
+          "parameters": [
+            "() => {...}",
+            "[selectedStoryIndex, stories]"
+          ],
+          "defaults": {
+            "callback": "function",
+            "initialArray": "[selectedStoryIndex, stories]"
+          }
+        }
+      ],
+      "isBuiltInHook": true,
+      "hookCategory": "performance",
+      "jsdoc": {
+        "description": "Returns a memoized callback function",
+        "params": [
+          {
+            "name": "callback",
+            "type": "T",
+            "description": "The callback function to memoize"
+          },
+          {
+            "name": "deps",
+            "type": "DependencyList",
+            "description": "Array of dependencies"
+          }
+        ],
+        "returns": {
+          "type": "T",
+          "description": "The memoized callback function"
+        }
+      }
+    },
+    {
+      "displayName": "useContext",
+      "filePath": "React Built-in",
+      "description": "Accepts a context object and returns the current context value",
+      "type": "hook",
+      "props": [],
+      "hookUsages": [
+        {
+          "file": "src\\components\\darkmoode\\ThemeProvider.tsx",
+          "line": 84,
+          "code": "const context = useContext(ThemeContext);",
+          "context": "context",
+          "parameters": [
+            "ThemeContext"
+          ],
+          "defaults": {
+            "variable": "ThemeContext"
+          }
+        }
+      ],
+      "isBuiltInHook": true,
+      "hookCategory": "context"
+    },
+    {
+      "displayName": "useRef",
+      "filePath": "React Built-in",
+      "description": "Returns a mutable ref object whose .current property is initialized to the passed argument",
+      "type": "hook",
+      "props": [],
+      "hookUsages": [
+        {
+          "file": "src\\features\\auth\\components\\VerifyOtpForm.tsx",
+          "line": 25,
+          "code": "const inputRefs = useRef<(HTMLInputElement | null)[]>([]);",
+          "context": "inputRefs",
+          "parameters": [
+            "[]"
+          ],
+          "defaults": {
+            "initialArray": "[]"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreatePost.tsx",
+          "line": 39,
+          "code": "const fileInputRef = useRef<HTMLInputElement>(null);",
+          "context": "fileInputRef",
+          "parameters": [
+            "{NullLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NullLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 74,
+          "code": "const fileInputRef = useRef<HTMLInputElement>(null);",
+          "context": "fileInputRef",
+          "parameters": [
+            "{NullLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NullLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 75,
+          "code": "const canvasRef = useRef<HTMLCanvasElement>(null);",
+          "context": "canvasRef",
+          "parameters": [
+            "{NullLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NullLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 76,
+          "code": "const videoRef = useRef<HTMLVideoElement>(null);",
+          "context": "videoRef",
+          "parameters": [
+            "{NullLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NullLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\create\\components\\CreateStory.tsx",
+          "line": 77,
+          "code": "const streamRef = useRef<MediaStream | null>(null);",
+          "context": "streamRef",
+          "parameters": [
+            "{NullLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NullLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\post\\components\\PostDropdown.tsx",
+          "line": 15,
+          "code": "const dropdownRef = useRef<HTMLDivElement>(null);",
+          "context": "dropdownRef",
+          "parameters": [
+            "{NullLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NullLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\components\\StoriesList.tsx",
+          "line": 22,
+          "code": "const scrollContainerRef = useRef<HTMLDivElement>(null);",
+          "context": "scrollContainerRef",
+          "parameters": [
+            "{NullLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NullLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\hooks\\useStoryTimer.ts",
+          "line": 36,
+          "code": "const startTimeRef = useRef<number>(0);",
+          "context": "startTimeRef",
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\hooks\\useStoryTimer.ts",
+          "line": 37,
+          "code": "const animationRef = useRef<number | null>(null);",
+          "context": "animationRef",
+          "parameters": [
+            "{NullLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NullLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\hooks\\useStoryTimer.ts",
+          "line": 38,
+          "code": "const pausedAtRef = useRef<number>(0);",
+          "context": "pausedAtRef",
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        },
+        {
+          "file": "src\\features\\stories\\hooks\\useStoryTimer.ts",
+          "line": 39,
+          "code": "const totalElapsedRef = useRef<number>(0);",
+          "context": "totalElapsedRef",
+          "parameters": [
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "initialState": "{NumericLiteral}"
+          }
+        }
+      ],
+      "isBuiltInHook": true,
+      "hookCategory": "ref"
+    },
+    {
+      "displayName": "useRouter",
+      "filePath": "Unknown",
+      "description": "Hook: useRouter (used in codebase but definition not found)",
+      "type": "hook",
+      "props": [],
+      "hookUsages": [
+        {
+          "file": "src\\app\\page.tsx",
+          "line": 10,
+          "code": "const router = useRouter();",
+          "context": "router",
+          "parameters": [],
+          "defaults": {}
+        },
+        {
+          "file": "src\\features\\auth\\hooks\\useAuth.ts",
+          "line": 10,
+          "code": "const router = useRouter();",
+          "context": "router",
+          "parameters": [],
+          "defaults": {}
+        },
+        {
+          "file": "src\\features\\dashboard\\components\\LogoutButton.tsx",
+          "line": 8,
+          "code": "const router = useRouter();",
+          "context": "router",
+          "parameters": [],
+          "defaults": {}
+        },
+        {
+          "file": "src\\app\\dashboard\\tabs\\@explore\\error.tsx",
+          "line": 6,
+          "code": "const router = useRouter();",
+          "context": "router",
+          "parameters": [],
+          "defaults": {}
+        },
+        {
+          "file": "src\\app\\dashboard\\tabs\\@feed\\error.tsx",
+          "line": 6,
+          "code": "const router = useRouter();",
+          "context": "router",
+          "parameters": [],
+          "defaults": {}
+        },
+        {
+          "file": "src\\app\\dashboard\\tabs\\@notifications\\error.tsx",
+          "line": 6,
+          "code": "const router = useRouter();",
+          "context": "router",
+          "parameters": [],
+          "defaults": {}
+        },
+        {
+          "file": "src\\app\\dashboard\\tabs\\@profile\\error.tsx",
+          "line": 6,
+          "code": "const router = useRouter();",
+          "context": "router",
+          "parameters": [],
+          "defaults": {}
+        }
+      ],
+      "isBuiltInHook": false,
+      "hookCategory": "custom"
+    },
+    {
+      "displayName": "useAuth",
+      "filePath": "src\\features\\auth\\hooks\\useAuth.ts",
+      "description": "Custom React hook: useAuth",
+      "type": "hook",
+      "props": [],
+      "hookSignature": "",
+      "parameters": [],
+      "returnType": {
+        "type": "any"
+      },
+      "realUsageExamples": [
+        "const { step, phone, isLoading, handleSendOtp, handleVerifyOtp, handleBack } = useAuth();"
+      ],
+      "hookUsages": [
+        {
+          "file": "src\\app\\auth\\page.tsx",
+          "line": 10,
+          "code": "const { step, phone, isLoading, handleSendOtp, handleVerifyOtp, handleBack } = useAuth();",
+          "context": "AuthPage",
+          "destructuring": [
+            "step",
+            "phone",
+            "isLoading",
+            "handleSendOtp",
+            "handleVerifyOtp",
+            "handleBack"
+          ],
+          "parameters": [],
+          "defaults": {}
+        }
+      ],
+      "isBuiltInHook": false,
+      "hookCategory": "custom"
+    },
+    {
+      "displayName": "useTheme",
+      "filePath": "src\\components\\darkmoode\\ThemeProvider.tsx",
+      "description": "Custom React hook: useTheme",
+      "type": "hook",
+      "props": [],
+      "hookSignature": "",
+      "parameters": [],
+      "returnType": {
+        "type": "any"
+      },
+      "realUsageExamples": [
+        "const { isDarkMode, toggleDarkMode } = useTheme();",
+        "const { isDarkMode, toggleDarkMode, mounted } = useTheme();"
+      ],
+      "hookUsages": [
+        {
+          "file": "src\\components\\darkmoode\\ThemeToggle.tsx",
+          "line": 7,
+          "code": "const { isDarkMode, toggleDarkMode } = useTheme();",
+          "context": "ThemeToggle",
+          "destructuring": [
+            "isDarkMode",
+            "toggleDarkMode"
+          ],
+          "parameters": [],
+          "defaults": {}
+        },
+        {
+          "file": "src\\features\\dashboard\\components\\DashboardLayout.tsx",
+          "line": 18,
+          "code": "const { isDarkMode, toggleDarkMode, mounted } = useTheme();",
+          "context": "DashboardLayout",
+          "destructuring": [
+            "isDarkMode",
+            "toggleDarkMode",
+            "mounted"
+          ],
+          "parameters": [],
+          "defaults": {}
+        },
+        {
+          "file": "src\\features\\settings\\components\\ThemeToggle.tsx",
+          "line": 7,
+          "code": "const { isDarkMode, toggleDarkMode } = useTheme();",
+          "context": "ThemeToggle",
+          "destructuring": [
+            "isDarkMode",
+            "toggleDarkMode"
+          ],
+          "parameters": [],
+          "defaults": {}
+        },
+        {
+          "file": "src\\shared\\ui\\toggle\\ThemeToggle.tsx",
+          "line": 17,
+          "code": "const { isDarkMode, toggleDarkMode } = useTheme();",
+          "context": "ThemeToggle",
+          "destructuring": [
+            "isDarkMode",
+            "toggleDarkMode"
+          ],
+          "parameters": [],
+          "defaults": {}
+        }
+      ],
+      "isBuiltInHook": false,
+      "hookCategory": "custom"
+    },
+    {
+      "displayName": "usePhoneValidation",
+      "filePath": "src\\features\\auth\\hooks\\usePhoneValidation.ts",
+      "description": "Custom React hook: usePhoneValidation",
+      "type": "hook",
+      "props": [],
+      "hookSignature": "",
+      "parameters": [],
+      "returnType": {
+        "type": "any"
+      },
+      "realUsageExamples": [
+        "const { phone, error, isValid, handlePhoneChange } = usePhoneValidation();"
+      ],
+      "hookUsages": [
+        {
+          "file": "src\\features\\auth\\components\\SendOtpForm.tsx",
+          "line": 16,
+          "code": "const { phone, error, isValid, handlePhoneChange } = usePhoneValidation();",
+          "context": "SendOtpForm",
+          "destructuring": [
+            "phone",
+            "error",
+            "isValid",
+            "handlePhoneChange"
+          ],
+          "parameters": [],
+          "defaults": {}
+        }
+      ],
+      "isBuiltInHook": false,
+      "hookCategory": "custom"
+    },
+    {
+      "displayName": "useSearch",
+      "filePath": "src\\features\\explore\\hooks\\useSearch.ts",
+      "description": "Custom React hook: useSearch",
+      "type": "hook",
+      "props": [],
+      "hookSignature": "",
+      "parameters": [],
+      "returnType": {
+        "type": "any"
+      },
+      "realUsageExamples": [
+        "const { query, isTyping, handleChange, handleClear } = useSearch(onSearch, 500);"
+      ],
+      "hookUsages": [
+        {
+          "file": "src\\features\\explore\\components\\SearchBar.tsx",
+          "line": 11,
+          "code": "const { query, isTyping, handleChange, handleClear } = useSearch(onSearch, 500);",
+          "context": "SearchBar",
+          "destructuring": [
+            "query",
+            "isTyping",
+            "handleChange",
+            "handleClear"
+          ],
+          "parameters": [
+            "onSearch",
+            "{NumericLiteral}"
+          ],
+          "defaults": {
+            "variable": "onSearch",
+            "initialState": "{NumericLiteral}"
+          }
+        }
+      ],
+      "isBuiltInHook": false,
+      "hookCategory": "custom"
+    },
+    {
+      "displayName": "useExplore",
+      "filePath": "src\\features\\explore\\hooks\\useExplore.ts",
+      "description": "Custom React hook: useExplore",
+      "type": "hook",
+      "props": [],
+      "hookSignature": "",
+      "parameters": [],
+      "returnType": {
+        "type": "any"
+      },
+      "realUsageExamples": [
+        "const { posts, isLoading, handleSearch, searchQuery } = useExplore();"
+      ],
+      "hookUsages": [
+        {
+          "file": "src\\app\\dashboard\\tabs\\@explore\\page.tsx",
+          "line": 8,
+          "code": "const { posts, isLoading, handleSearch, searchQuery } = useExplore();",
+          "context": "ExplorePage",
+          "destructuring": [
+            "posts",
+            "isLoading",
+            "handleSearch",
+            "searchQuery"
+          ],
+          "parameters": [],
+          "defaults": {}
+        }
+      ],
+      "isBuiltInHook": false,
+      "hookCategory": "custom"
+    },
+    {
+      "displayName": "useMobileDetect",
+      "filePath": "src\\features\\dashboard\\hooks\\useMobileDetect.ts",
+      "description": "Custom React hook: useMobileDetect",
+      "type": "hook",
+      "props": [],
+      "hookSignature": "",
+      "parameters": [],
+      "returnType": {
+        "type": "any"
+      },
+      "realUsageExamples": [
+        "const { isMobile } = useMobileDetect();"
+      ],
+      "hookUsages": [
+        {
+          "file": "src\\features\\dashboard\\components\\DashboardLayout.tsx",
+          "line": 19,
+          "code": "const { isMobile } = useMobileDetect();",
+          "context": "DashboardLayout",
+          "destructuring": [
+            "isMobile"
+          ],
+          "parameters": [],
+          "defaults": {}
+        }
+      ],
+      "isBuiltInHook": false,
+      "hookCategory": "custom"
+    },
+    {
+      "displayName": "useDashboard",
+      "filePath": "src\\features\\dashboard\\hooks\\useDashboard.ts",
+      "description": "Custom React hook: useDashboard",
+      "type": "hook",
+      "props": [],
+      "hookSignature": "",
+      "parameters": [],
+      "returnType": {
+        "type": "any"
+      },
+      "realUsageExamples": [
+        "const { activeTab, setActiveTab, tabs } = useDashboard();"
+      ],
+      "hookUsages": [
+        {
+          "file": "src\\features\\dashboard\\components\\DashboardLayout.tsx",
+          "line": 20,
+          "code": "const { activeTab, setActiveTab, tabs } = useDashboard();",
+          "context": "DashboardLayout",
+          "destructuring": [
+            "activeTab",
+            "setActiveTab",
+            "tabs"
+          ],
+          "parameters": [],
+          "defaults": {}
+        }
+      ],
+      "isBuiltInHook": false,
+      "hookCategory": "custom"
+    },
+    {
+      "displayName": "useImageEditor",
+      "filePath": "src\\features\\create\\hooks\\useImageEditor.ts",
+      "description": "Custom React hook: useImageEditor",
+      "type": "hook",
+      "props": [],
+      "hookSignature": "",
+      "parameters": [],
+      "returnType": {
+        "type": "any"
+      },
+      "realUsageExamples": [
+        "const { \r\n    editedImage, \r\n    aspectRatio, \r\n    filter, \r\n    settings,\r\n    loadImage, \r\n    updateAspectRatio, \r\n    updateFilter,\r\n    updateBrightness,\r\n    updateContrast,\r\n    updateSaturation,\r\n    updateTemperature,\r\n  } = useImageEditor();"
+      ],
+      "hookUsages": [
+        {
+          "file": "src\\features\\create\\components\\CreatePost.tsx",
+          "line": 40,
+          "code": "const {",
+          "context": "fileInputRef",
+          "destructuring": [
+            "editedImage",
+            "aspectRatio",
+            "filter",
+            "settings",
+            "loadImage",
+            "updateAspectRatio",
+            "updateFilter",
+            "updateBrightness",
+            "updateContrast",
+            "updateSaturation",
+            "updateTemperature"
+          ],
+          "parameters": [],
+          "defaults": {}
+        }
+      ],
+      "isBuiltInHook": false,
+      "hookCategory": "custom"
+    },
+    {
+      "displayName": "useStoryEditor",
+      "filePath": "src\\features\\create\\hooks\\useStoryEditor.ts",
+      "description": "Custom React hook: useStoryEditor",
+      "type": "hook",
+      "props": [],
+      "hookSignature": "",
+      "parameters": [],
+      "returnType": {
+        "type": "any"
+      },
+      "realUsageExamples": [],
+      "hookUsages": [],
+      "isBuiltInHook": false,
+      "hookCategory": "custom"
+    },
+    {
+      "displayName": "useNotifications",
+      "filePath": "src\\features\\notifications\\hooks\\useNotifications.ts",
+      "description": "Custom React hook: useNotifications",
+      "type": "hook",
+      "props": [],
+      "hookSignature": "",
+      "parameters": [],
+      "returnType": {
+        "type": "any"
+      },
+      "realUsageExamples": [
+        "const {\r\n    activeTab,\r\n    setActiveTab,\r\n    notifications,\r\n    handleAcceptRequest,\r\n    handleRejectRequest,\r\n    handleMarkAsRead,\r\n    handleFollowBack,\r\n  } = useNotifications();"
+      ],
+      "hookUsages": [
+        {
+          "file": "src\\features\\notifications\\components\\NotificationsLayout.tsx",
+          "line": 10,
+          "code": "const {",
+          "context": "NotificationsPage",
+          "destructuring": [
+            "activeTab",
+            "setActiveTab",
+            "notifications",
+            "handleAcceptRequest",
+            "handleRejectRequest",
+            "handleMarkAsRead",
+            "handleFollowBack"
+          ],
+          "parameters": [],
+          "defaults": {}
+        }
+      ],
+      "isBuiltInHook": false,
+      "hookCategory": "custom"
+    },
+    {
+      "displayName": "usePosts",
+      "filePath": "src\\features\\post\\hooks\\usePosts.ts",
+      "description": "Custom React hook: usePosts",
+      "type": "hook",
+      "props": [],
+      "hookSignature": "",
+      "parameters": [],
+      "returnType": {
+        "type": "any"
+      },
+      "realUsageExamples": [
+        "const { posts, isLoading, likePost, savePost } = usePosts();"
+      ],
+      "hookUsages": [
+        {
+          "file": "src\\features\\post\\components\\PostsList.tsx",
+          "line": 7,
+          "code": "const { posts, isLoading, likePost, savePost } = usePosts();",
+          "context": "PostsList",
+          "destructuring": [
+            "posts",
+            "isLoading",
+            "likePost",
+            "savePost"
+          ],
+          "parameters": [],
+          "defaults": {}
+        }
+      ],
+      "isBuiltInHook": false,
+      "hookCategory": "custom"
+    },
+    {
+      "displayName": "useProfile",
+      "filePath": "src\\features\\profile\\hooks\\useProfile.ts",
+      "description": "Custom React hook: useProfile",
+      "type": "hook",
+      "props": [],
+      "hookSignature": "",
+      "parameters": [],
+      "returnType": {
+        "type": "any"
+      },
+      "realUsageExamples": [
+        "const { user, stats, isLoading, isFollowing, handleFollow } = useProfile();"
+      ],
+      "hookUsages": [
+        {
+          "file": "src\\app\\dashboard\\tabs\\@profile\\page.tsx",
+          "line": 19,
+          "code": "const { user, stats, isLoading, isFollowing, handleFollow } = useProfile();",
+          "context": "ProfilePage",
+          "destructuring": [
+            "user",
+            "stats",
+            "isLoading",
+            "isFollowing",
+            "handleFollow"
+          ],
+          "parameters": [],
+          "defaults": {}
+        }
+      ],
+      "isBuiltInHook": false,
+      "hookCategory": "custom"
+    },
+    {
+      "displayName": "useProfilePosts",
+      "filePath": "src\\features\\profile\\hooks\\useProfilePosts.ts",
+      "description": "Custom React hook: useProfilePosts",
+      "type": "hook",
+      "props": [],
+      "hookSignature": "",
+      "parameters": [],
+      "returnType": {
+        "type": "any"
+      },
+      "realUsageExamples": [
+        "const { activeTab, setActiveTab, posts, isLoading: postsLoading } = useProfilePosts();"
+      ],
+      "hookUsages": [
+        {
+          "file": "src\\app\\dashboard\\tabs\\@profile\\page.tsx",
+          "line": 20,
+          "code": "const { activeTab, setActiveTab, posts, isLoading: postsLoading } = useProfilePosts();",
+          "context": "ProfilePage",
+          "destructuring": [
+            "activeTab",
+            "setActiveTab",
+            "posts",
+            "isLoading"
+          ],
+          "parameters": [],
+          "defaults": {}
+        }
+      ],
+      "isBuiltInHook": false,
+      "hookCategory": "custom"
+    },
+    {
+      "displayName": "useSettings",
+      "filePath": "src\\features\\settings\\hooks\\useSettings.ts",
+      "description": "Custom React hook: useSettings",
+      "type": "hook",
+      "props": [],
+      "hookSignature": "",
+      "parameters": [],
+      "returnType": {
+        "type": "any"
+      },
+      "realUsageExamples": [
+        "const { handleLogout } = useSettings();",
+        "const { mainMenu } = useSettings();"
+      ],
+      "hookUsages": [
+        {
+          "file": "src\\features\\settings\\components\\LogoutButton.tsx",
+          "line": 7,
+          "code": "const { handleLogout } = useSettings();",
+          "context": "LogoutButton",
+          "destructuring": [
+            "handleLogout"
+          ],
+          "parameters": [],
+          "defaults": {}
+        },
+        {
+          "file": "src\\features\\settings\\components\\SettingsDrawer.tsx",
+          "line": 11,
+          "code": "const { mainMenu } = useSettings();",
+          "context": "SettingsDrawer",
+          "destructuring": [
+            "mainMenu"
+          ],
+          "parameters": [],
+          "defaults": {}
+        }
+      ],
+      "isBuiltInHook": false,
+      "hookCategory": "custom"
+    },
+    {
+      "displayName": "useStories",
+      "filePath": "src\\features\\stories\\hooks\\useStories.ts",
+      "description": "Custom React hook: useStories",
+      "type": "hook",
+      "props": [],
+      "hookSignature": "",
+      "parameters": [],
+      "returnType": {
+        "type": "any"
+      },
+      "realUsageExamples": [
+        "const {\r\n    stories,\r\n    selectedStory,\r\n    isOpen,\r\n    openStory,\r\n    closeStory,\r\n    nextStory,\r\n    prevStory,\r\n    hasNext,\r\n    hasPrev,\r\n  } = useStories();"
+      ],
+      "hookUsages": [
+        {
+          "file": "src\\features\\stories\\components\\StoriesList.tsx",
+          "line": 10,
+          "code": "const {",
+          "context": "StoriesList",
+          "destructuring": [
+            "stories",
+            "selectedStory",
+            "isOpen",
+            "openStory",
+            "closeStory",
+            "nextStory",
+            "prevStory",
+            "hasNext",
+            "hasPrev"
+          ],
+          "parameters": [],
+          "defaults": {}
+        }
+      ],
+      "isBuiltInHook": false,
+      "hookCategory": "custom"
+    }
+  ]
+}

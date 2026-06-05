@@ -1,0 +1,216 @@
+---
+title: useRef
+slug: /hooks/useref
+---
+
+# useRef
+
+Returns a mutable ref object whose .current property is initialized to the passed argument
+
+## Hook Information
+
+**Category:** ref
+
+**Type:** React Built-in Hook
+
+
+## Hook Usage in Codebase
+
+Found **12 usage(s)** across your codebase:
+
+### Usage 1
+
+**File:** `src\features\auth\components\VerifyOtpForm.tsx` (line 25)
+
+**Context:** Used in `inputRefs` function
+
+```typescript
+const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
+```
+
+**Parameters used:** `[]`
+
+**Default values:**
+
+- `initialArray`: `[]`
+
+### Usage 2
+
+**File:** `src\features\create\components\CreatePost.tsx` (line 39)
+
+**Context:** Used in `fileInputRef` function
+
+```typescript
+const fileInputRef = useRef<HTMLInputElement>(null);
+```
+
+**Parameters used:** `{NullLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NullLiteral}`
+
+### Usage 3
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 74)
+
+**Context:** Used in `fileInputRef` function
+
+```typescript
+const fileInputRef = useRef<HTMLInputElement>(null);
+```
+
+**Parameters used:** `{NullLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NullLiteral}`
+
+### Usage 4
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 75)
+
+**Context:** Used in `canvasRef` function
+
+```typescript
+const canvasRef = useRef<HTMLCanvasElement>(null);
+```
+
+**Parameters used:** `{NullLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NullLiteral}`
+
+### Usage 5
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 76)
+
+**Context:** Used in `videoRef` function
+
+```typescript
+const videoRef = useRef<HTMLVideoElement>(null);
+```
+
+**Parameters used:** `{NullLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NullLiteral}`
+
+### Usage 6
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 77)
+
+**Context:** Used in `streamRef` function
+
+```typescript
+const streamRef = useRef<MediaStream | null>(null);
+```
+
+**Parameters used:** `{NullLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NullLiteral}`
+
+### Usage 7
+
+**File:** `src\features\post\components\PostDropdown.tsx` (line 15)
+
+**Context:** Used in `dropdownRef` function
+
+```typescript
+const dropdownRef = useRef<HTMLDivElement>(null);
+```
+
+**Parameters used:** `{NullLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NullLiteral}`
+
+### Usage 8
+
+**File:** `src\features\stories\components\StoriesList.tsx` (line 22)
+
+**Context:** Used in `scrollContainerRef` function
+
+```typescript
+const scrollContainerRef = useRef<HTMLDivElement>(null);
+```
+
+**Parameters used:** `{NullLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NullLiteral}`
+
+### Usage 9
+
+**File:** `src\features\stories\hooks\useStoryTimer.ts` (line 36)
+
+**Context:** Used in `startTimeRef` function
+
+```typescript
+const startTimeRef = useRef<number>(0);
+```
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 10
+
+**File:** `src\features\stories\hooks\useStoryTimer.ts` (line 37)
+
+**Context:** Used in `animationRef` function
+
+```typescript
+const animationRef = useRef<number | null>(null);
+```
+
+**Parameters used:** `{NullLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NullLiteral}`
+
+### Usage 11
+
+**File:** `src\features\stories\hooks\useStoryTimer.ts` (line 38)
+
+**Context:** Used in `pausedAtRef` function
+
+```typescript
+const pausedAtRef = useRef<number>(0);
+```
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 12
+
+**File:** `src\features\stories\hooks\useStoryTimer.ts` (line 39)
+
+**Context:** Used in `totalElapsedRef` function
+
+```typescript
+const totalElapsedRef = useRef<number>(0);
+```
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+
+
+## Source
+`React Built-in`

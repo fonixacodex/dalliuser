@@ -1,0 +1,38 @@
+---
+title: NotificationList
+slug: /components/notificationlist
+---
+
+# NotificationList
+
+
+
+## Real Usage Examples
+
+### Usage 1
+
+```tsx
+<NotificationList
+notifications={notifications}
+activeTab={activeTab}
+onAccept={handleAcceptRequest}
+onReject={handleRejectRequest}
+onMarkAsRead={handleMarkAsRead}
+onFollowBack={handleFollowBack}
+/>
+```
+
+## Props
+
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `notifications` | `Notification[]` | Yes | - |  |
+| `activeTab` | `enum` | Yes | - |  |
+| `onAccept` | `(id: number) => void` | Yes | - |  |
+| `onReject` | `(id: number) => void` | Yes | - |  |
+| `onMarkAsRead` | `(id: number) => void` | Yes | - |  |
+| `onFollowBack` | `(username: string) => void` | Yes | - |  |
+
+
+## Source
+`src\features\notifications\components\NotificationList.tsx`

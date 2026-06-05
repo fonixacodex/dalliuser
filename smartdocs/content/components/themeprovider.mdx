@@ -1,0 +1,54 @@
+---
+title: ThemeProvider
+slug: /components/themeprovider
+---
+
+# ThemeProvider
+
+
+
+## Real Usage Examples
+
+### Usage 1
+
+```tsx
+<ThemeProvider>
+{children}
+<Toaster
+position="top-center"
+reverseOrder={false}
+toastOptions={{
+duration: 3000,
+style: {
+direction: "rtl",
+background: "#363636",
+color: "#fff",
+fontSize: "14px",
+padding: "12px",
+borderRadius: "12px",
+},
+success: {
+duration: 3000,
+iconTheme: {
+primary: "#10B981",
+secondary: "#fff",
+},
+},
+error: {
+duration: 4000,
+iconTheme: {
+primary: "#EF4444",
+secondary: "#fff",
+},
+},
+}}
+/>
+</ThemeProvider>
+```
+
+## Props
+
+No props available.
+
+## Source
+`src\components\darkmoode\ThemeProvider.tsx`

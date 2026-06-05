@@ -1,0 +1,26 @@
+---
+title: proxy
+slug: /components/proxy
+---
+
+# proxy
+
+
+
+## Props
+
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `cookies` | `RequestCookies` | Yes | - |  |
+| `nextUrl` | `NextURL` | Yes | - |  |
+| `page` | `void` | Yes | - | @deprecated `page` has been deprecated in favour of `URLPattern`.
+Read more: https://nextjs.org/docs/messages/middleware-request-page |
+| `ua` | `void` | Yes | - | @deprecated `ua` has been removed in favour of \`userAgent\` function.
+Read more: https://nextjs.org/docs/messages/middleware-parse-user-agent |
+| `url` | `string` | Yes | - | The **`url`** read-only property of the Request interface contains the URL of the request.
+
+[MDN Reference](https://developer.mozilla.org/docs/Web/API/Request/url) |
+
+
+## Source
+`src\proxy.ts`

@@ -1,0 +1,27 @@
+---
+title: ExplorePost
+slug: /components/explorepost
+---
+
+# ExplorePost
+
+
+
+## Real Usage Examples
+
+### Usage 1
+
+```tsx
+<ExplorePost key={post.id} post={post} onClick={() => setSelectedPost(post)} />
+```
+
+## Props
+
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `post` | `{ id: number; username: string; userAvatar: string; image: string; caption: string; likes: number; comments: number; timestamp: string; width: number; height: number; }` | Yes | - |  |
+| `onClick` | `() => void` | Yes | - |  |
+
+
+## Source
+`src\features\explore\components\ExplorePost.tsx`

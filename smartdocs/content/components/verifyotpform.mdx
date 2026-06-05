@@ -1,0 +1,36 @@
+---
+title: VerifyOtpForm
+slug: /components/verifyotpform
+---
+
+# VerifyOtpForm
+
+
+
+## Real Usage Examples
+
+### Usage 1
+
+```tsx
+<VerifyOtpForm
+phone={phone}
+isLoading={isLoading}
+onVerify={handleVerifyOtp}
+onBack={handleBack}
+onResend={handleResend}
+/>
+```
+
+## Props
+
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `phone` | `string` | Yes | - |  |
+| `isLoading` | `boolean` | Yes | - |  |
+| `onVerify` | `(code: string) => void` | Yes | - |  |
+| `onBack` | `() => void` | Yes | - |  |
+| `onResend` | `() => void` | Yes | - |  |
+
+
+## Source
+`src\features\auth\components\VerifyOtpForm.tsx`

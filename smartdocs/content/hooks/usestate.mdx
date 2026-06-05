@@ -1,0 +1,2844 @@
+---
+title: useState
+slug: /hooks/usestate
+---
+
+# useState
+
+Returns a stateful value and a function to update it
+
+## Hook Information
+
+**Category:** state
+
+**Type:** React Built-in Hook
+
+
+## Hook Usage in Codebase
+
+Found **156 usage(s)** across your codebase:
+
+### Usage 1
+
+**File:** `src\app\not-found.tsx` (line 8)
+
+**Context:** Used in `NotFound` function
+
+```typescript
+const [isDarkMode, setIsDarkMode] = useState(false);
+```
+
+**Destructured variables:** `isDarkMode`, `setIsDarkMode`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 2
+
+**File:** `src\app\not-found.tsx` (line 9)
+
+**Context:** Used in `NotFound` function
+
+```typescript
+const [mounted, setMounted] = useState(false);
+```
+
+**Destructured variables:** `mounted`, `setMounted`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 3
+
+**File:** `src\app\page.tsx` (line 11)
+
+**Context:** Used in `router` function
+
+```typescript
+const [isDarkMode, setIsDarkMode] = useState(false);
+```
+
+**Destructured variables:** `isDarkMode`, `setIsDarkMode`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 4
+
+**File:** `src\components\darkmoode\ThemeProvider.tsx` (line 14)
+
+**Context:** Used in `ThemeProvider` function
+
+```typescript
+const [isDarkMode, setIsDarkMode] = useState(false);
+```
+
+**Destructured variables:** `isDarkMode`, `setIsDarkMode`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 5
+
+**File:** `src\components\darkmoode\ThemeProvider.tsx` (line 15)
+
+**Context:** Used in `ThemeProvider` function
+
+```typescript
+const [mounted, setMounted] = useState(false);
+```
+
+**Destructured variables:** `mounted`, `setMounted`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 6
+
+**File:** `src\features\auth\hooks\useAuth.ts` (line 11)
+
+**Context:** Used in `router` function
+
+```typescript
+const [step, setStep] = useState<AuthStep>("send");
+```
+
+**Destructured variables:** `step`, `setStep`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 7
+
+**File:** `src\features\auth\hooks\useAuth.ts` (line 12)
+
+**Context:** Used in `router` function
+
+```typescript
+const [phone, setPhone] = useState("");
+```
+
+**Destructured variables:** `phone`, `setPhone`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 8
+
+**File:** `src\features\auth\hooks\useAuth.ts` (line 13)
+
+**Context:** Used in `router` function
+
+```typescript
+const [isLoading, setIsLoading] = useState(false);
+```
+
+**Destructured variables:** `isLoading`, `setIsLoading`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 9
+
+**File:** `src\features\auth\hooks\useOtpTimer.ts` (line 6)
+
+**Context:** Used in `useOtpTimer` function
+
+```typescript
+const [timeLeft, setTimeLeft] = useState(initialTime);
+```
+
+**Destructured variables:** `timeLeft`, `setTimeLeft`
+
+**Parameters used:** `initialTime`
+
+**Default values:**
+
+- `variable`: `initialTime`
+
+### Usage 10
+
+**File:** `src\features\auth\hooks\useOtpTimer.ts` (line 7)
+
+**Context:** Used in `useOtpTimer` function
+
+```typescript
+const [isActive, setIsActive] = useState(true);
+```
+
+**Destructured variables:** `isActive`, `setIsActive`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 11
+
+**File:** `src\features\auth\hooks\usePhoneValidation.ts` (line 6)
+
+**Context:** Used in `usePhoneValidation` function
+
+```typescript
+const [phone, setPhone] = useState("");
+```
+
+**Destructured variables:** `phone`, `setPhone`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 12
+
+**File:** `src\features\auth\hooks\usePhoneValidation.ts` (line 7)
+
+**Context:** Used in `usePhoneValidation` function
+
+```typescript
+const [error, setError] = useState("");
+```
+
+**Destructured variables:** `error`, `setError`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 13
+
+**File:** `src\features\auth\hooks\usePhoneValidation.ts` (line 8)
+
+**Context:** Used in `usePhoneValidation` function
+
+```typescript
+const [isValid, setIsValid] = useState(false);
+```
+
+**Destructured variables:** `isValid`, `setIsValid`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 14
+
+**File:** `src\features\auth\components\AuthCarousel.tsx` (line 27)
+
+**Context:** Used in `AuthCarousel` function
+
+```typescript
+const [currentSlide, setCurrentSlide] = useState(0);
+```
+
+**Destructured variables:** `currentSlide`, `setCurrentSlide`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 15
+
+**File:** `src\features\auth\components\SendOtpForm.tsx` (line 17)
+
+**Context:** Used in `SendOtpForm` function
+
+```typescript
+const [agreeTerms, setAgreeTerms] = useState(false);
+```
+
+**Destructured variables:** `agreeTerms`, `setAgreeTerms`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 16
+
+**File:** `src\features\auth\components\SendOtpForm.tsx` (line 19)
+
+**Context:** Used in `SendOtpForm` function
+
+```typescript
+const [isFocused, setIsFocused] = useState(false);
+```
+
+**Destructured variables:** `isFocused`, `setIsFocused`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 17
+
+**File:** `src\features\auth\components\VerifyOtpForm.tsx` (line 23)
+
+**Context:** Used in `VerifyOtpForm` function
+
+```typescript
+const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+```
+
+**Destructured variables:** `otp`, `setOtp`
+
+**Parameters used:** `[...]`
+
+**Default values:**
+
+- `initialArray`: `[...]`
+
+### Usage 18
+
+**File:** `src\features\auth\components\VerifyOtpForm.tsx` (line 24)
+
+**Context:** Used in `VerifyOtpForm` function
+
+```typescript
+const [focusedIndex, setFocusedIndex] = useState<number | null>(null);
+```
+
+**Destructured variables:** `focusedIndex`, `setFocusedIndex`
+
+**Parameters used:** `{NullLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NullLiteral}`
+
+### Usage 19
+
+**File:** `src\features\explore\components\ExploreGrid.tsx` (line 17)
+
+**Context:** Used in `ExploreGrid` function
+
+```typescript
+const [selectedPost, setSelectedPost] = useState<ExplorePostType | null>(null);
+```
+
+**Destructured variables:** `selectedPost`, `setSelectedPost`
+
+**Parameters used:** `{NullLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NullLiteral}`
+
+### Usage 20
+
+**File:** `src\features\explore\components\PostModal.tsx` (line 24)
+
+**Context:** Used in `PostModal` function
+
+```typescript
+const [liked, setLiked] = useState(false);
+```
+
+**Destructured variables:** `liked`, `setLiked`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 21
+
+**File:** `src\features\explore\components\PostModal.tsx` (line 25)
+
+**Context:** Used in `PostModal` function
+
+```typescript
+const [saved, setSaved] = useState(false);
+```
+
+**Destructured variables:** `saved`, `setSaved`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 22
+
+**File:** `src\features\explore\components\PostModal.tsx` (line 26)
+
+**Context:** Used in `PostModal` function
+
+```typescript
+const [likesCount, setLikesCount] = useState(post.likes);
+```
+
+**Destructured variables:** `likesCount`, `setLikesCount`
+
+**Parameters used:** `{MemberExpression}`
+
+**Default values:**
+
+- `initialState`: `{MemberExpression}`
+
+### Usage 23
+
+**File:** `src\features\explore\components\PostModal.tsx` (line 27)
+
+**Context:** Used in `PostModal` function
+
+```typescript
+const [showDropdown, setShowDropdown] = useState(false);
+```
+
+**Destructured variables:** `showDropdown`, `setShowDropdown`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 24
+
+**File:** `src\features\explore\hooks\useExplore.ts` (line 8)
+
+**Context:** Used in `useExplore` function
+
+```typescript
+const [posts, setPosts] = useState<ExplorePost[]>([]);
+```
+
+**Destructured variables:** `posts`, `setPosts`
+
+**Parameters used:** `[]`
+
+**Default values:**
+
+- `initialArray`: `[]`
+
+### Usage 25
+
+**File:** `src\features\explore\hooks\useExplore.ts` (line 9)
+
+**Context:** Used in `useExplore` function
+
+```typescript
+const [isLoading, setIsLoading] = useState(true);
+```
+
+**Destructured variables:** `isLoading`, `setIsLoading`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 26
+
+**File:** `src\features\explore\hooks\useExplore.ts` (line 10)
+
+**Context:** Used in `useExplore` function
+
+```typescript
+const [hasMore, setHasMore] = useState(true);
+```
+
+**Destructured variables:** `hasMore`, `setHasMore`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 27
+
+**File:** `src\features\explore\hooks\useExplore.ts` (line 11)
+
+**Context:** Used in `useExplore` function
+
+```typescript
+const [page, setPage] = useState(1);
+```
+
+**Destructured variables:** `page`, `setPage`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 28
+
+**File:** `src\features\explore\hooks\useExplore.ts` (line 12)
+
+**Context:** Used in `useExplore` function
+
+```typescript
+const [searchQuery, setSearchQuery] = useState("");
+```
+
+**Destructured variables:** `searchQuery`, `setSearchQuery`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 29
+
+**File:** `src\features\explore\hooks\useSearch.ts` (line 6)
+
+**Context:** Used in `useSearch` function
+
+```typescript
+const [query, setQuery] = useState("");
+```
+
+**Destructured variables:** `query`, `setQuery`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 30
+
+**File:** `src\features\explore\hooks\useSearch.ts` (line 7)
+
+**Context:** Used in `useSearch` function
+
+```typescript
+const [isTyping, setIsTyping] = useState(false);
+```
+
+**Destructured variables:** `isTyping`, `setIsTyping`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 31
+
+**File:** `src\features\dashboard\hooks\useDashboard.ts` (line 8)
+
+**Context:** Used in `useDashboard` function
+
+```typescript
+const [activeTab, setActiveTab] = useState<TabType>("home");
+```
+
+**Destructured variables:** `activeTab`, `setActiveTab`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 32
+
+**File:** `src\features\dashboard\hooks\useMobileDetect.ts` (line 6)
+
+**Context:** Used in `useMobileDetect` function
+
+```typescript
+const [isMobile, setIsMobile] = useState(false);
+```
+
+**Destructured variables:** `isMobile`, `setIsMobile`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 33
+
+**File:** `src\features\dashboard\hooks\useTheme.ts` (line 7)
+
+**Context:** Used in `useTheme` function
+
+```typescript
+const [isDarkMode, setIsDarkMode] = useState(false);
+```
+
+**Destructured variables:** `isDarkMode`, `setIsDarkMode`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 34
+
+**File:** `src\features\dashboard\hooks\useTheme.ts` (line 8)
+
+**Context:** Used in `useTheme` function
+
+```typescript
+const [mounted, setMounted] = useState(false);
+```
+
+**Destructured variables:** `mounted`, `setMounted`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 35
+
+**File:** `src\features\create\components\CreateLayout.tsx` (line 11)
+
+**Context:** Used in `CreateLayout` function
+
+```typescript
+const [activeType, setActiveType] = useState<CreateType>("post");
+```
+
+**Destructured variables:** `activeType`, `setActiveType`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 36
+
+**File:** `src\features\create\components\CreatePost.tsx` (line 25)
+
+**Context:** Used in `CreatePost` function
+
+```typescript
+const [selectedImages, setSelectedImages] = useState<string[]>([]);
+```
+
+**Destructured variables:** `selectedImages`, `setSelectedImages`
+
+**Parameters used:** `[]`
+
+**Default values:**
+
+- `initialArray`: `[]`
+
+### Usage 37
+
+**File:** `src\features\create\components\CreatePost.tsx` (line 26)
+
+**Context:** Used in `CreatePost` function
+
+```typescript
+const [currentImageIndex, setCurrentImageIndex] = useState(0);
+```
+
+**Destructured variables:** `currentImageIndex`, `setCurrentImageIndex`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 38
+
+**File:** `src\features\create\components\CreatePost.tsx` (line 27)
+
+**Context:** Used in `CreatePost` function
+
+```typescript
+const [caption, setCaption] = useState("");
+```
+
+**Destructured variables:** `caption`, `setCaption`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 39
+
+**File:** `src\features\create\components\CreatePost.tsx` (line 28)
+
+**Context:** Used in `CreatePost` function
+
+```typescript
+const [location, setLocation] = useState("");
+```
+
+**Destructured variables:** `location`, `setLocation`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 40
+
+**File:** `src\features\create\components\CreatePost.tsx` (line 29)
+
+**Context:** Used in `CreatePost` function
+
+```typescript
+const [hashtags, setHashtags] = useState("");
+```
+
+**Destructured variables:** `hashtags`, `setHashtags`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 41
+
+**File:** `src\features\create\components\CreatePost.tsx` (line 30)
+
+**Context:** Used in `CreatePost` function
+
+```typescript
+const [isUploading, setIsUploading] = useState(false);
+```
+
+**Destructured variables:** `isUploading`, `setIsUploading`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 42
+
+**File:** `src\features\create\components\CreatePost.tsx` (line 31)
+
+**Context:** Used in `CreatePost` function
+
+```typescript
+const [showEditor, setShowEditor] = useState(false);
+```
+
+**Destructured variables:** `showEditor`, `setShowEditor`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 43
+
+**File:** `src\features\create\components\CreatePost.tsx` (line 32)
+
+**Context:** Used in `CreatePost` function
+
+```typescript
+const [postSettings, setPostSettings] = useState<PostSettings>({
+```
+
+**Destructured variables:** `postSettings`, `setPostSettings`
+
+**Parameters used:** `{disableComments: ..., disableLikes: ..., allowSharing: true, ageRestriction: ...}`
+
+**Default values:**
+
+- `disableComments`: `...`
+- `disableLikes`: `...`
+- `allowSharing`: `true`
+- `ageRestriction`: `...`
+
+### Usage 44
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 53)
+
+**Context:** Used in `CreateStory` function
+
+```typescript
+const [storyImage, setStoryImage] = useState<string | null>(null);
+```
+
+**Destructured variables:** `storyImage`, `setStoryImage`
+
+**Parameters used:** `{NullLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NullLiteral}`
+
+### Usage 45
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 54)
+
+**Context:** Used in `CreateStory` function
+
+```typescript
+const [originalImage, setOriginalImage] = useState<string | null>(null);
+```
+
+**Destructured variables:** `originalImage`, `setOriginalImage`
+
+**Parameters used:** `{NullLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NullLiteral}`
+
+### Usage 46
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 55)
+
+**Context:** Used in `CreateStory` function
+
+```typescript
+const [text, setText] = useState("");
+```
+
+**Destructured variables:** `text`, `setText`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 47
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 56)
+
+**Context:** Used in `CreateStory` function
+
+```typescript
+const [textLayers, setTextLayers] = useState<TextLayer[]>([]);
+```
+
+**Destructured variables:** `textLayers`, `setTextLayers`
+
+**Parameters used:** `[]`
+
+**Default values:**
+
+- `initialArray`: `[]`
+
+### Usage 48
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 57)
+
+**Context:** Used in `CreateStory` function
+
+```typescript
+const [backgroundColor, setBackgroundColor] = useState("#6366f1");
+```
+
+**Destructured variables:** `backgroundColor`, `setBackgroundColor`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 49
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 58)
+
+**Context:** Used in `CreateStory` function
+
+```typescript
+const [isUploading, setIsUploading] = useState(false);
+```
+
+**Destructured variables:** `isUploading`, `setIsUploading`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 50
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 59)
+
+**Context:** Used in `CreateStory` function
+
+```typescript
+const [activeTab, setActiveTab] = useState<"edit" | "text" | "stickers" | "music" | "links">("edit");
+```
+
+**Destructured variables:** `activeTab`, `setActiveTab`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 51
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 60)
+
+**Context:** Used in `CreateStory` function
+
+```typescript
+const [brightness, setBrightness] = useState(0);
+```
+
+**Destructured variables:** `brightness`, `setBrightness`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 52
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 61)
+
+**Context:** Used in `CreateStory` function
+
+```typescript
+const [contrast, setContrast] = useState(0);
+```
+
+**Destructured variables:** `contrast`, `setContrast`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 53
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 62)
+
+**Context:** Used in `CreateStory` function
+
+```typescript
+const [saturation, setSaturation] = useState(0);
+```
+
+**Destructured variables:** `saturation`, `setSaturation`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 54
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 63)
+
+**Context:** Used in `CreateStory` function
+
+```typescript
+const [temperature, setTemperature] = useState(0);
+```
+
+**Destructured variables:** `temperature`, `setTemperature`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 55
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 64)
+
+**Context:** Used in `CreateStory` function
+
+```typescript
+const [filter, setFilter] = useState("normal");
+```
+
+**Destructured variables:** `filter`, `setFilter`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 56
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 65)
+
+**Context:** Used in `CreateStory` function
+
+```typescript
+const [zoom, setZoom] = useState(1);
+```
+
+**Destructured variables:** `zoom`, `setZoom`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 57
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 66)
+
+**Context:** Used in `CreateStory` function
+
+```typescript
+const [rotation, setRotation] = useState(0);
+```
+
+**Destructured variables:** `rotation`, `setRotation`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 58
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 67)
+
+**Context:** Used in `CreateStory` function
+
+```typescript
+const [link, setLink] = useState<LinkItem | null>(null);
+```
+
+**Destructured variables:** `link`, `setLink`
+
+**Parameters used:** `{NullLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NullLiteral}`
+
+### Usage 59
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 68)
+
+**Context:** Used in `CreateStory` function
+
+```typescript
+const [showLinkInput, setShowLinkInput] = useState(false);
+```
+
+**Destructured variables:** `showLinkInput`, `setShowLinkInput`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 60
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 69)
+
+**Context:** Used in `CreateStory` function
+
+```typescript
+const [linkUrl, setLinkUrl] = useState("");
+```
+
+**Destructured variables:** `linkUrl`, `setLinkUrl`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 61
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 70)
+
+**Context:** Used in `CreateStory` function
+
+```typescript
+const [linkTitle, setLinkTitle] = useState("");
+```
+
+**Destructured variables:** `linkTitle`, `setLinkTitle`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 62
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 71)
+
+**Context:** Used in `CreateStory` function
+
+```typescript
+const [musicTrack, setMusicTrack] = useState<string | null>(null);
+```
+
+**Destructured variables:** `musicTrack`, `setMusicTrack`
+
+**Parameters used:** `{NullLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NullLiteral}`
+
+### Usage 63
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 72)
+
+**Context:** Used in `CreateStory` function
+
+```typescript
+const [duration, setDuration] = useState(7);
+```
+
+**Destructured variables:** `duration`, `setDuration`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 64
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 80)
+
+**Context:** Used in `streamRef` function
+
+```typescript
+const [showCamera, setShowCamera] = useState(false);
+```
+
+**Destructured variables:** `showCamera`, `setShowCamera`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 65
+
+**File:** `src\features\create\components\CreateStory.tsx` (line 81)
+
+**Context:** Used in `streamRef` function
+
+```typescript
+const [cameraActive, setCameraActive] = useState(false);
+```
+
+**Destructured variables:** `cameraActive`, `setCameraActive`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 66
+
+**File:** `src\features\create\components\ImageEditor.tsx` (line 23)
+
+**Context:** Used in `ImageEditor` function
+
+```typescript
+const [editedImage, setEditedImage] = useState(imageUrl);
+```
+
+**Destructured variables:** `editedImage`, `setEditedImage`
+
+**Parameters used:** `imageUrl`
+
+**Default values:**
+
+- `variable`: `imageUrl`
+
+### Usage 67
+
+**File:** `src\features\create\components\ImageEditor.tsx` (line 24)
+
+**Context:** Used in `ImageEditor` function
+
+```typescript
+const [activeTab, setActiveTab] = useState<"adjust" | "rotate">("adjust");
+```
+
+**Destructured variables:** `activeTab`, `setActiveTab`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 68
+
+**File:** `src\features\create\components\ImageEditor.tsx` (line 25)
+
+**Context:** Used in `ImageEditor` function
+
+```typescript
+const [brightness, setBrightness] = useState(0);
+```
+
+**Destructured variables:** `brightness`, `setBrightness`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 69
+
+**File:** `src\features\create\components\ImageEditor.tsx` (line 26)
+
+**Context:** Used in `ImageEditor` function
+
+```typescript
+const [contrast, setContrast] = useState(0);
+```
+
+**Destructured variables:** `contrast`, `setContrast`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 70
+
+**File:** `src\features\create\components\ImageEditor.tsx` (line 27)
+
+**Context:** Used in `ImageEditor` function
+
+```typescript
+const [saturation, setSaturation] = useState(0);
+```
+
+**Destructured variables:** `saturation`, `setSaturation`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 71
+
+**File:** `src\features\create\components\ImageEditor.tsx` (line 28)
+
+**Context:** Used in `ImageEditor` function
+
+```typescript
+const [temperature, setTemperature] = useState(0);
+```
+
+**Destructured variables:** `temperature`, `setTemperature`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 72
+
+**File:** `src\features\create\components\ImageEditor.tsx` (line 29)
+
+**Context:** Used in `ImageEditor` function
+
+```typescript
+const [isProcessing, setIsProcessing] = useState(false);
+```
+
+**Destructured variables:** `isProcessing`, `setIsProcessing`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 73
+
+**File:** `src\features\create\components\LinkInput.tsx` (line 14)
+
+**Context:** Used in `LinkInput` function
+
+```typescript
+const [url, setUrl] = useState(existingLink?.url || "");
+```
+
+**Destructured variables:** `url`, `setUrl`
+
+**Parameters used:** `{LogicalExpression}`
+
+**Default values:**
+
+- `initialState`: `{LogicalExpression}`
+
+### Usage 74
+
+**File:** `src\features\create\components\LinkInput.tsx` (line 15)
+
+**Context:** Used in `LinkInput` function
+
+```typescript
+const [title, setTitle] = useState(existingLink?.title || "");
+```
+
+**Destructured variables:** `title`, `setTitle`
+
+**Parameters used:** `{LogicalExpression}`
+
+**Default values:**
+
+- `initialState`: `{LogicalExpression}`
+
+### Usage 75
+
+**File:** `src\features\create\components\LinkInput.tsx` (line 16)
+
+**Context:** Used in `LinkInput` function
+
+```typescript
+const [displayType, setDisplayType] = useState<"button" | "text" | "swipe">(
+```
+
+**Destructured variables:** `displayType`, `setDisplayType`
+
+**Parameters used:** `{LogicalExpression}`
+
+**Default values:**
+
+- `initialState`: `{LogicalExpression}`
+
+### Usage 76
+
+**File:** `src\features\create\components\LinkInput.tsx` (line 19)
+
+**Context:** Used in `LinkInput` function
+
+```typescript
+const [isValid, setIsValid] = useState(false);
+```
+
+**Destructured variables:** `isValid`, `setIsValid`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 77
+
+**File:** `src\features\create\components\LinkInput.tsx` (line 20)
+
+**Context:** Used in `LinkInput` function
+
+```typescript
+const [isChecking, setIsChecking] = useState(false);
+```
+
+**Destructured variables:** `isChecking`, `setIsChecking`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 78
+
+**File:** `src\features\create\components\TextOverlay.tsx` (line 13)
+
+**Context:** Used in `TextOverlay` function
+
+```typescript
+const [text, setText] = useState("");
+```
+
+**Destructured variables:** `text`, `setText`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 79
+
+**File:** `src\features\create\components\TextOverlay.tsx` (line 14)
+
+**Context:** Used in `TextOverlay` function
+
+```typescript
+const [fontSize, setFontSize] = useState(32);
+```
+
+**Destructured variables:** `fontSize`, `setFontSize`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 80
+
+**File:** `src\features\create\components\TextOverlay.tsx` (line 15)
+
+**Context:** Used in `TextOverlay` function
+
+```typescript
+const [color, setColor] = useState("#FFFFFF");
+```
+
+**Destructured variables:** `color`, `setColor`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 81
+
+**File:** `src\features\create\hooks\useImageEditor.ts` (line 8)
+
+**Context:** Used in `useImageEditor` function
+
+```typescript
+const [originalImage, setOriginalImage] = useState<string | null>(null);
+```
+
+**Destructured variables:** `originalImage`, `setOriginalImage`
+
+**Parameters used:** `{NullLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NullLiteral}`
+
+### Usage 82
+
+**File:** `src\features\create\hooks\useImageEditor.ts` (line 9)
+
+**Context:** Used in `useImageEditor` function
+
+```typescript
+const [editedImage, setEditedImage] = useState<string | null>(null);
+```
+
+**Destructured variables:** `editedImage`, `setEditedImage`
+
+**Parameters used:** `{NullLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NullLiteral}`
+
+### Usage 83
+
+**File:** `src\features\create\hooks\useImageEditor.ts` (line 10)
+
+**Context:** Used in `useImageEditor` function
+
+```typescript
+const [aspectRatio, setAspectRatio] = useState<AspectRatio>("1:1");
+```
+
+**Destructured variables:** `aspectRatio`, `setAspectRatio`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 84
+
+**File:** `src\features\create\hooks\useImageEditor.ts` (line 11)
+
+**Context:** Used in `useImageEditor` function
+
+```typescript
+const [filter, setFilter] = useState<FilterType>("normal");
+```
+
+**Destructured variables:** `filter`, `setFilter`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 85
+
+**File:** `src\features\create\hooks\useImageEditor.ts` (line 12)
+
+**Context:** Used in `useImageEditor` function
+
+```typescript
+const [zoom, setZoom] = useState(1);
+```
+
+**Destructured variables:** `zoom`, `setZoom`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 86
+
+**File:** `src\features\create\hooks\useImageEditor.ts` (line 13)
+
+**Context:** Used in `useImageEditor` function
+
+```typescript
+const [brightness, setBrightness] = useState(0);
+```
+
+**Destructured variables:** `brightness`, `setBrightness`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 87
+
+**File:** `src\features\create\hooks\useImageEditor.ts` (line 14)
+
+**Context:** Used in `useImageEditor` function
+
+```typescript
+const [contrast, setContrast] = useState(0);
+```
+
+**Destructured variables:** `contrast`, `setContrast`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 88
+
+**File:** `src\features\create\hooks\useImageEditor.ts` (line 15)
+
+**Context:** Used in `useImageEditor` function
+
+```typescript
+const [saturation, setSaturation] = useState(0);
+```
+
+**Destructured variables:** `saturation`, `setSaturation`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 89
+
+**File:** `src\features\create\hooks\useImageEditor.ts` (line 16)
+
+**Context:** Used in `useImageEditor` function
+
+```typescript
+const [temperature, setTemperature] = useState(0);
+```
+
+**Destructured variables:** `temperature`, `setTemperature`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 90
+
+**File:** `src\features\create\hooks\useImageEditor.ts` (line 17)
+
+**Context:** Used in `useImageEditor` function
+
+```typescript
+const [vignette, setVignette] = useState(0);
+```
+
+**Destructured variables:** `vignette`, `setVignette`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 91
+
+**File:** `src\features\create\hooks\useImageUpload.ts` (line 24)
+
+**Context:** Used in `useImageUpload` function
+
+```typescript
+const [files, setFiles] = useState<File[]>([]);
+```
+
+**Destructured variables:** `files`, `setFiles`
+
+**Parameters used:** `[]`
+
+**Default values:**
+
+- `initialArray`: `[]`
+
+### Usage 92
+
+**File:** `src\features\create\hooks\useImageUpload.ts` (line 25)
+
+**Context:** Used in `useImageUpload` function
+
+```typescript
+const [previews, setPreviews] = useState<string[]>([]);
+```
+
+**Destructured variables:** `previews`, `setPreviews`
+
+**Parameters used:** `[]`
+
+**Default values:**
+
+- `initialArray`: `[]`
+
+### Usage 93
+
+**File:** `src\features\create\hooks\useImageUpload.ts` (line 26)
+
+**Context:** Used in `useImageUpload` function
+
+```typescript
+const [isUploading, setIsUploading] = useState(false);
+```
+
+**Destructured variables:** `isUploading`, `setIsUploading`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 94
+
+**File:** `src\features\create\hooks\useImageUpload.ts` (line 27)
+
+**Context:** Used in `useImageUpload` function
+
+```typescript
+const [uploadProgress, setUploadProgress] = useState<number[]>([]);
+```
+
+**Destructured variables:** `uploadProgress`, `setUploadProgress`
+
+**Parameters used:** `[]`
+
+**Default values:**
+
+- `initialArray`: `[]`
+
+### Usage 95
+
+**File:** `src\features\create\hooks\useStoryEditor.ts` (line 25)
+
+**Context:** Used in `useStoryEditor` function
+
+```typescript
+const [image, setImage] = useState<string | null>(null);
+```
+
+**Destructured variables:** `image`, `setImage`
+
+**Parameters used:** `{NullLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NullLiteral}`
+
+### Usage 96
+
+**File:** `src\features\create\hooks\useStoryEditor.ts` (line 26)
+
+**Context:** Used in `useStoryEditor` function
+
+```typescript
+const [textLayers, setTextLayers] = useState<TextLayer[]>([]);
+```
+
+**Destructured variables:** `textLayers`, `setTextLayers`
+
+**Parameters used:** `[]`
+
+**Default values:**
+
+- `initialArray`: `[]`
+
+### Usage 97
+
+**File:** `src\features\create\hooks\useStoryEditor.ts` (line 27)
+
+**Context:** Used in `useStoryEditor` function
+
+```typescript
+const [settings, setSettings] = useState<StorySettings>({
+```
+
+**Destructured variables:** `settings`, `setSettings`
+
+**Parameters used:** `{duration: 7, allowComments: true, allowSharing: true, saveToGallery: ...}`
+
+**Default values:**
+
+- `duration`: `7`
+- `allowComments`: `true`
+- `allowSharing`: `true`
+- `saveToGallery`: `...`
+
+### Usage 98
+
+**File:** `src\features\create\hooks\useStoryEditor.ts` (line 33)
+
+**Context:** Used in `useStoryEditor` function
+
+```typescript
+const [brightness, setBrightness] = useState(0);
+```
+
+**Destructured variables:** `brightness`, `setBrightness`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 99
+
+**File:** `src\features\create\hooks\useStoryEditor.ts` (line 34)
+
+**Context:** Used in `useStoryEditor` function
+
+```typescript
+const [contrast, setContrast] = useState(0);
+```
+
+**Destructured variables:** `contrast`, `setContrast`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 100
+
+**File:** `src\features\create\hooks\useStoryEditor.ts` (line 35)
+
+**Context:** Used in `useStoryEditor` function
+
+```typescript
+const [saturation, setSaturation] = useState(0);
+```
+
+**Destructured variables:** `saturation`, `setSaturation`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 101
+
+**File:** `src\features\create\hooks\useStoryEditor.ts` (line 36)
+
+**Context:** Used in `useStoryEditor` function
+
+```typescript
+const [temperature, setTemperature] = useState(0);
+```
+
+**Destructured variables:** `temperature`, `setTemperature`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 102
+
+**File:** `src\features\create\hooks\useStoryEditor.ts` (line 37)
+
+**Context:** Used in `useStoryEditor` function
+
+```typescript
+const [selectedFilter, setSelectedFilter] = useState("normal");
+```
+
+**Destructured variables:** `selectedFilter`, `setSelectedFilter`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 103
+
+**File:** `src\features\notifications\hooks\useNotifications.ts` (line 105)
+
+**Context:** Used in `useNotifications` function
+
+```typescript
+const [activeTab, setActiveTab] = useState<NotificationTabType>("all");
+```
+
+**Destructured variables:** `activeTab`, `setActiveTab`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 104
+
+**File:** `src\features\notifications\hooks\useNotifications.ts` (line 106)
+
+**Context:** Used in `useNotifications` function
+
+```typescript
+const [notifications, setNotifications] = useState<Notification[]>(mockNotifications);
+```
+
+**Destructured variables:** `notifications`, `setNotifications`
+
+**Parameters used:** `mockNotifications`
+
+**Default values:**
+
+- `variable`: `mockNotifications`
+
+### Usage 105
+
+**File:** `src\features\post\components\PostCard.tsx` (line 25)
+
+**Context:** Used in `PostCard` function
+
+```typescript
+const [comments, setComments] = useState<Comment[]>([
+```
+
+**Destructured variables:** `comments`, `setComments`
+
+**Parameters used:** `[{...}, {...}]`
+
+**Default values:**
+
+- `initialArray`: `[{...}, {...}]`
+
+### Usage 106
+
+**File:** `src\features\post\components\PostCard.tsx` (line 42)
+
+**Context:** Used in `PostCard` function
+
+```typescript
+const [isLiked, setIsLiked] = useState(post.isLiked || false);
+```
+
+**Destructured variables:** `isLiked`, `setIsLiked`
+
+**Parameters used:** `{LogicalExpression}`
+
+**Default values:**
+
+- `initialState`: `{LogicalExpression}`
+
+### Usage 107
+
+**File:** `src\features\post\components\PostCard.tsx` (line 43)
+
+**Context:** Used in `PostCard` function
+
+```typescript
+const [isSaved, setIsSaved] = useState(post.isSaved || false);
+```
+
+**Destructured variables:** `isSaved`, `setIsSaved`
+
+**Parameters used:** `{LogicalExpression}`
+
+**Default values:**
+
+- `initialState`: `{LogicalExpression}`
+
+### Usage 108
+
+**File:** `src\features\post\components\PostCard.tsx` (line 44)
+
+**Context:** Used in `PostCard` function
+
+```typescript
+const [likesCount, setLikesCount] = useState(post.likes);
+```
+
+**Destructured variables:** `likesCount`, `setLikesCount`
+
+**Parameters used:** `{MemberExpression}`
+
+**Default values:**
+
+- `initialState`: `{MemberExpression}`
+
+### Usage 109
+
+**File:** `src\features\post\components\PostCard.tsx` (line 45)
+
+**Context:** Used in `global` function
+
+```typescript
+const [showComments, setShowComments] = useState(false);
+```
+
+**Destructured variables:** `showComments`, `setShowComments`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 110
+
+**File:** `src\features\post\components\PostComments.tsx` (line 26)
+
+**Context:** Used in `PostComments` function
+
+```typescript
+const [newComment, setNewComment] = useState("");
+```
+
+**Destructured variables:** `newComment`, `setNewComment`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 111
+
+**File:** `src\features\post\components\PostComments.tsx` (line 27)
+
+**Context:** Used in `PostComments` function
+
+```typescript
+const [replyToId, setReplyToId] = useState<number | null>(null);
+```
+
+**Destructured variables:** `replyToId`, `setReplyToId`
+
+**Parameters used:** `{NullLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NullLiteral}`
+
+### Usage 112
+
+**File:** `src\features\post\components\PostComments.tsx` (line 28)
+
+**Context:** Used in `PostComments` function
+
+```typescript
+const [replyText, setReplyText] = useState("");
+```
+
+**Destructured variables:** `replyText`, `setReplyText`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 113
+
+**File:** `src\features\post\components\PostHeader.tsx` (line 16)
+
+**Context:** Used in `PostHeader` function
+
+```typescript
+const [showDropdown, setShowDropdown] = useState(false);
+```
+
+**Destructured variables:** `showDropdown`, `setShowDropdown`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 114
+
+**File:** `src\features\post\components\PostHeader.tsx` (line 17)
+
+**Context:** Used in `PostHeader` function
+
+```typescript
+const [avatarError, setAvatarError] = useState(false);
+```
+
+**Destructured variables:** `avatarError`, `setAvatarError`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 115
+
+**File:** `src\features\post\components\PostImage.tsx` (line 13)
+
+**Context:** Used in `PostImage` function
+
+```typescript
+const [imageError, setImageError] = useState(false);
+```
+
+**Destructured variables:** `imageError`, `setImageError`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 116
+
+**File:** `src\features\post\hooks\useComments.ts` (line 17)
+
+**Context:** Used in `useComments` function
+
+```typescript
+const [comments, setComments] = useState<Comment[]>(initialComments);
+```
+
+**Destructured variables:** `comments`, `setComments`
+
+**Parameters used:** `initialComments`
+
+**Default values:**
+
+- `variable`: `initialComments`
+
+### Usage 117
+
+**File:** `src\features\post\hooks\useComments.ts` (line 18)
+
+**Context:** Used in `useComments` function
+
+```typescript
+const [isLoading, setIsLoading] = useState(false);
+```
+
+**Destructured variables:** `isLoading`, `setIsLoading`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 118
+
+**File:** `src\features\post\hooks\useComments.ts` (line 19)
+
+**Context:** Used in `useComments` function
+
+```typescript
+const [replyTo, setReplyTo] = useState<Comment | null>(null);
+```
+
+**Destructured variables:** `replyTo`, `setReplyTo`
+
+**Parameters used:** `{NullLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NullLiteral}`
+
+### Usage 119
+
+**File:** `src\features\post\hooks\usePostActions.ts` (line 16)
+
+**Context:** Used in `usePostActions` function
+
+```typescript
+const [state, setState] = useState<PostActionState>({
+```
+
+**Destructured variables:** `state`, `setState`
+
+**Parameters used:** `{isLiked: ..., isSaved: ..., isBookmarked: ..., likesCount: ..., sharesCount: ..., viewsCount: ..., key: ...}`
+
+**Default values:**
+
+- `isLiked`: `...`
+- `isSaved`: `...`
+- `isBookmarked`: `...`
+- `likesCount`: `...`
+- `sharesCount`: `...`
+- `viewsCount`: `...`
+- `key`: `...`
+
+### Usage 120
+
+**File:** `src\features\post\hooks\usePostActions.ts` (line 26)
+
+**Context:** Used in `usePostActions` function
+
+```typescript
+const [isProcessing, setIsProcessing] = useState(false);
+```
+
+**Destructured variables:** `isProcessing`, `setIsProcessing`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 121
+
+**File:** `src\features\post\hooks\usePosts.ts` (line 58)
+
+**Context:** Used in `usePosts` function
+
+```typescript
+const [posts, setPosts] = useState<Post[]>([]);
+```
+
+**Destructured variables:** `posts`, `setPosts`
+
+**Parameters used:** `[]`
+
+**Default values:**
+
+- `initialArray`: `[]`
+
+### Usage 122
+
+**File:** `src\features\post\hooks\usePosts.ts` (line 59)
+
+**Context:** Used in `usePosts` function
+
+```typescript
+const [isLoading, setIsLoading] = useState(true);
+```
+
+**Destructured variables:** `isLoading`, `setIsLoading`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 123
+
+**File:** `src\features\profile\components\ProfileActions.tsx` (line 15)
+
+**Context:** Used in `ProfileActions` function
+
+```typescript
+const [copied, setCopied] = useState(false);
+```
+
+**Destructured variables:** `copied`, `setCopied`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 124
+
+**File:** `src\features\profile\hooks\useProfile.ts` (line 9)
+
+**Context:** Used in `useProfile` function
+
+```typescript
+const [user, setUser] = useState<ProfileUser | null>(null);
+```
+
+**Destructured variables:** `user`, `setUser`
+
+**Parameters used:** `{NullLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NullLiteral}`
+
+### Usage 125
+
+**File:** `src\features\profile\hooks\useProfile.ts` (line 10)
+
+**Context:** Used in `useProfile` function
+
+```typescript
+const [stats, setStats] = useState<ProfileStats | null>(null);
+```
+
+**Destructured variables:** `stats`, `setStats`
+
+**Parameters used:** `{NullLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NullLiteral}`
+
+### Usage 126
+
+**File:** `src\features\profile\hooks\useProfile.ts` (line 11)
+
+**Context:** Used in `useProfile` function
+
+```typescript
+const [isLoading, setIsLoading] = useState(true);
+```
+
+**Destructured variables:** `isLoading`, `setIsLoading`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 127
+
+**File:** `src\features\profile\hooks\useProfile.ts` (line 12)
+
+**Context:** Used in `useProfile` function
+
+```typescript
+const [isFollowing, setIsFollowing] = useState(false);
+```
+
+**Destructured variables:** `isFollowing`, `setIsFollowing`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 128
+
+**File:** `src\features\profile\hooks\useProfilePosts.ts` (line 8)
+
+**Context:** Used in `useProfilePosts` function
+
+```typescript
+const [activeTab, setActiveTab] = useState<TabType>("posts");
+```
+
+**Destructured variables:** `activeTab`, `setActiveTab`
+
+**Parameters used:** `{StringLiteral}`
+
+**Default values:**
+
+- `initialState`: `{StringLiteral}`
+
+### Usage 129
+
+**File:** `src\features\profile\hooks\useProfilePosts.ts` (line 9)
+
+**Context:** Used in `useProfilePosts` function
+
+```typescript
+const [posts, setPosts] = useState<ProfilePost[]>([]);
+```
+
+**Destructured variables:** `posts`, `setPosts`
+
+**Parameters used:** `[]`
+
+**Default values:**
+
+- `initialArray`: `[]`
+
+### Usage 130
+
+**File:** `src\features\profile\hooks\useProfilePosts.ts` (line 10)
+
+**Context:** Used in `useProfilePosts` function
+
+```typescript
+const [isLoading, setIsLoading] = useState(true);
+```
+
+**Destructured variables:** `isLoading`, `setIsLoading`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 131
+
+**File:** `src\features\settings\hooks\useTheme.ts` (line 7)
+
+**Context:** Used in `useTheme` function
+
+```typescript
+const [isDarkMode, setIsDarkMode] = useState(false);
+```
+
+**Destructured variables:** `isDarkMode`, `setIsDarkMode`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 132
+
+**File:** `src\features\stories\components\StoriesList.tsx` (line 23)
+
+**Context:** Used in `scrollContainerRef` function
+
+```typescript
+const [showLeftButton, setShowLeftButton] = useState(false);
+```
+
+**Destructured variables:** `showLeftButton`, `setShowLeftButton`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 133
+
+**File:** `src\features\stories\components\StoriesList.tsx` (line 24)
+
+**Context:** Used in `scrollContainerRef` function
+
+```typescript
+const [showRightButton, setShowRightButton] = useState(true);
+```
+
+**Destructured variables:** `showRightButton`, `setShowRightButton`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 134
+
+**File:** `src\features\stories\components\StoriesList.tsx` (line 25)
+
+**Context:** Used in `scrollContainerRef` function
+
+```typescript
+const [imageErrors, setImageErrors] = useState<Record<number, boolean>>({});
+```
+
+**Destructured variables:** `imageErrors`, `setImageErrors`
+
+**Parameters used:** `{}`
+
+**Default values:**
+
+- `initialState`: `{}`
+
+### Usage 135
+
+**File:** `src\features\stories\components\StoryActions.tsx` (line 28)
+
+**Context:** Used in `StoryActions` function
+
+```typescript
+const [isLiked, setIsLiked] = useState(false);
+```
+
+**Destructured variables:** `isLiked`, `setIsLiked`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 136
+
+**File:** `src\features\stories\components\StoryActions.tsx` (line 29)
+
+**Context:** Used in `StoryActions` function
+
+```typescript
+const [isSaved, setIsSaved] = useState(false);
+```
+
+**Destructured variables:** `isSaved`, `setIsSaved`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 137
+
+**File:** `src\features\stories\components\StoryActions.tsx` (line 30)
+
+**Context:** Used in `StoryActions` function
+
+```typescript
+const [showMore, setShowMore] = useState(false);
+```
+
+**Destructured variables:** `showMore`, `setShowMore`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 138
+
+**File:** `src\features\stories\components\StoryActions.tsx` (line 31)
+
+**Context:** Used in `StoryActions` function
+
+```typescript
+const [likesCount, setLikesCount] = useState(0);
+```
+
+**Destructured variables:** `likesCount`, `setLikesCount`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 139
+
+**File:** `src\features\stories\components\StoryHeader.tsx` (line 24)
+
+**Context:** Used in `StoryHeader` function
+
+```typescript
+const [imageError, setImageError] = useState(false);
+```
+
+**Destructured variables:** `imageError`, `setImageError`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 140
+
+**File:** `src\features\stories\components\StoryViewer.tsx` (line 25)
+
+**Context:** Used in `StoryViewer` function
+
+```typescript
+const [progress, setProgress] = useState(0);
+```
+
+**Destructured variables:** `progress`, `setProgress`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 141
+
+**File:** `src\features\stories\components\StoryViewer.tsx` (line 26)
+
+**Context:** Used in `StoryViewer` function
+
+```typescript
+const [isPaused, setIsPaused] = useState(false);
+```
+
+**Destructured variables:** `isPaused`, `setIsPaused`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 142
+
+**File:** `src\features\stories\components\StoryViewer.tsx` (line 27)
+
+**Context:** Used in `StoryViewer` function
+
+```typescript
+const [imageError, setImageError] = useState(false);
+```
+
+**Destructured variables:** `imageError`, `setImageError`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 143
+
+**File:** `src\features\stories\components\StoryViewer.tsx` (line 28)
+
+**Context:** Used in `StoryViewer` function
+
+```typescript
+const [isMuted, setIsMuted] = useState(true);
+```
+
+**Destructured variables:** `isMuted`, `setIsMuted`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 144
+
+**File:** `src\features\stories\components\StoryViewer.tsx` (line 29)
+
+**Context:** Used in `StoryViewer` function
+
+```typescript
+const [isLiked, setIsLiked] = useState(false);
+```
+
+**Destructured variables:** `isLiked`, `setIsLiked`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 145
+
+**File:** `src\features\stories\components\ViewerList.tsx` (line 14)
+
+**Context:** Used in `ViewerList` function
+
+```typescript
+const [isExpanded, setIsExpanded] = useState(false);
+```
+
+**Destructured variables:** `isExpanded`, `setIsExpanded`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 146
+
+**File:** `src\features\stories\hooks\useStories.ts` (line 80)
+
+**Context:** Used in `useStories` function
+
+```typescript
+const [stories, setStories] = useState<Story[]>(mockStories);
+```
+
+**Destructured variables:** `stories`, `setStories`
+
+**Parameters used:** `mockStories`
+
+**Default values:**
+
+- `variable`: `mockStories`
+
+### Usage 147
+
+**File:** `src\features\stories\hooks\useStories.ts` (line 81)
+
+**Context:** Used in `useStories` function
+
+```typescript
+const [selectedStoryIndex, setSelectedStoryIndex] = useState<number | null>(null);
+```
+
+**Destructured variables:** `selectedStoryIndex`, `setSelectedStoryIndex`
+
+**Parameters used:** `{NullLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NullLiteral}`
+
+### Usage 148
+
+**File:** `src\features\stories\hooks\useStories.ts` (line 82)
+
+**Context:** Used in `useStories` function
+
+```typescript
+const [isOpen, setIsOpen] = useState(false);
+```
+
+**Destructured variables:** `isOpen`, `setIsOpen`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 149
+
+**File:** `src\features\stories\hooks\useStoryTimer.ts` (line 31)
+
+**Context:** Used in `useStoryTimer` function
+
+```typescript
+const [progress, setProgress] = useState(0);
+```
+
+**Destructured variables:** `progress`, `setProgress`
+
+**Parameters used:** `{NumericLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NumericLiteral}`
+
+### Usage 150
+
+**File:** `src\features\stories\hooks\useStoryTimer.ts` (line 32)
+
+**Context:** Used in `useStoryTimer` function
+
+```typescript
+const [isPlaying, setIsPlaying] = useState(autoPlay);
+```
+
+**Destructured variables:** `isPlaying`, `setIsPlaying`
+
+**Parameters used:** `autoPlay`
+
+**Default values:**
+
+- `variable`: `autoPlay`
+
+### Usage 151
+
+**File:** `src\features\stories\hooks\useStoryTimer.ts` (line 33)
+
+**Context:** Used in `useStoryTimer` function
+
+```typescript
+const [isPaused, setIsPaused] = useState(false);
+```
+
+**Destructured variables:** `isPaused`, `setIsPaused`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 152
+
+**File:** `src\features\stories\hooks\useStoryTimer.ts` (line 34)
+
+**Context:** Used in `useStoryTimer` function
+
+```typescript
+const [isCompleted, setIsCompleted] = useState(false);
+```
+
+**Destructured variables:** `isCompleted`, `setIsCompleted`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 153
+
+**File:** `src\features\stories\utils\stories.utils.ts` (line 16)
+
+**Context:** Used in `useStories` function
+
+```typescript
+const [stories, setStories] = useState<Story[]>([
+```
+
+**Destructured variables:** `stories`, `setStories`
+
+**Parameters used:** `[...]`
+
+**Default values:**
+
+- `initialArray`: `[...]`
+
+### Usage 154
+
+**File:** `src\features\stories\utils\stories.utils.ts` (line 80)
+
+**Context:** Used in `global` function
+
+```typescript
+const [selectedStoryIndex, setSelectedStoryIndex] = useState<number | null>(null);
+```
+
+**Destructured variables:** `selectedStoryIndex`, `setSelectedStoryIndex`
+
+**Parameters used:** `{NullLiteral}`
+
+**Default values:**
+
+- `initialState`: `{NullLiteral}`
+
+### Usage 155
+
+**File:** `src\features\stories\utils\stories.utils.ts` (line 81)
+
+**Context:** Used in `global` function
+
+```typescript
+const [isOpen, setIsOpen] = useState(false);
+```
+
+**Destructured variables:** `isOpen`, `setIsOpen`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+### Usage 156
+
+**File:** `src\app\dashboard\tabs\@profile\page.tsx` (line 18)
+
+**Context:** Used in `ProfilePage` function
+
+```typescript
+const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+```
+
+**Destructured variables:** `isSettingsOpen`, `setIsSettingsOpen`
+
+**Parameters used:** `{BooleanLiteral}`
+
+**Default values:**
+
+- `initialState`: `{BooleanLiteral}`
+
+
+
+## Source
+`React Built-in`

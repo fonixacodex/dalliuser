@@ -1,0 +1,36 @@
+---
+title: DesktopSidebar
+slug: /components/desktopsidebar
+---
+
+# DesktopSidebar
+
+
+
+## Real Usage Examples
+
+### Usage 1
+
+```tsx
+<DesktopSidebar
+tabs={tabs}
+activeTab={activeTab}
+onTabChange={setActiveTab}
+isDarkMode={isDarkMode}
+onToggleTheme={toggleDarkMode}
+/>
+```
+
+## Props
+
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `tabs` | `Tab[]` | Yes | - |  |
+| `activeTab` | `string` | Yes | - |  |
+| `onTabChange` | `(tabId: any) => void` | Yes | - |  |
+| `isDarkMode` | `boolean` | Yes | - |  |
+| `onToggleTheme` | `() => void` | Yes | - |  |
+
+
+## Source
+`src\features\dashboard\components\DesktopSidebar.tsx`

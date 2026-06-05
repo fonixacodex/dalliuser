@@ -1,0 +1,11 @@
+{
+  "entryPoints": ["src"],
+  "out": "docs",
+  "name": "دالی - مستندات پروژه",
+  "includeVersion": true,
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "categorizeByGroup": true,
+  "plugin": [],
+  "entryPointStrategy": "expand"
+}

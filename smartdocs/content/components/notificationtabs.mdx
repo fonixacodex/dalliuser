@@ -1,0 +1,34 @@
+---
+title: NotificationTabs
+slug: /components/notificationtabs
+---
+
+# NotificationTabs
+
+
+
+## Real Usage Examples
+
+### Usage 1
+
+```tsx
+<NotificationTabs
+activeTab={activeTab}
+onTabChange={setActiveTab}
+unreadCount={unreadCount}
+requestCount={requestCount}
+/>
+```
+
+## Props
+
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `activeTab` | `enum` | Yes | - |  |
+| `onTabChange` | `(tab: NotificationTabType) => void` | Yes | - |  |
+| `unreadCount` | `number` | Yes | - |  |
+| `requestCount` | `number` | Yes | - |  |
+
+
+## Source
+`src\features\notifications\components\NotificationTabs.tsx`

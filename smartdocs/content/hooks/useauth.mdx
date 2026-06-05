@@ -1,0 +1,48 @@
+---
+title: useAuth
+slug: /hooks/useauth
+---
+
+# useAuth
+
+Custom React hook: useAuth
+
+## Hook Information
+
+**Category:** custom
+
+**Type:** Custom Hook
+
+
+## Return Type
+
+**Type:** `any`
+
+## Hook Usage in Codebase
+
+Found **1 usage(s)** across your codebase:
+
+### Usage 1
+
+**File:** `src\app\auth\page.tsx` (line 10)
+
+**Context:** Used in `AuthPage` function
+
+```typescript
+const { step, phone, isLoading, handleSendOtp, handleVerifyOtp, handleBack } = useAuth();
+```
+
+**Destructured variables:** `step`, `phone`, `isLoading`, `handleSendOtp`, `handleVerifyOtp`, `handleBack`
+
+
+
+## Real Usage Examples
+
+### Usage 1
+
+```typescript
+const { step, phone, isLoading, handleSendOtp, handleVerifyOtp, handleBack } = useAuth();
+```
+
+## Source
+`src\features\auth\hooks\useAuth.ts`

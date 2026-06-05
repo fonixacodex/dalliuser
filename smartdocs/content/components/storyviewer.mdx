@@ -1,0 +1,38 @@
+---
+title: StoryViewer
+slug: /components/storyviewer
+---
+
+# StoryViewer
+
+
+
+## Real Usage Examples
+
+### Usage 1
+
+```tsx
+<StoryViewer
+story={selectedStory}
+onClose={closeStory}
+onNext={nextStory}
+onPrev={prevStory}
+hasNext={hasNext}
+hasPrev={hasPrev}
+/>
+```
+
+## Props
+
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `story` | `Story` | Yes | - |  |
+| `onClose` | `() => void` | Yes | - |  |
+| `onNext` | `() => void` | Yes | - |  |
+| `onPrev` | `() => void` | Yes | - |  |
+| `hasNext` | `boolean` | Yes | - |  |
+| `hasPrev` | `boolean` | Yes | - |  |
+
+
+## Source
+`src\features\stories\components\StoryViewer.tsx`

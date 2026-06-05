@@ -1,0 +1,670 @@
+---
+title: useCallback
+slug: /hooks/usecallback
+---
+
+# useCallback
+
+Returns a memoized callback function
+
+## Hook Information
+
+**Category:** performance
+
+**Type:** React Built-in Hook
+
+
+## Hook Usage in Codebase
+
+Found **38 usage(s)** across your codebase:
+
+### Usage 1
+
+**File:** `src\features\auth\hooks\useAuth.ts` (line 15)
+
+**Context:** Used in `handleSendOtp` function
+
+```typescript
+const handleSendOtp = useCallback(async (userPhone: string) => {
+```
+
+**Parameters used:** `() => {...}`, `[]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[]`
+
+### Usage 2
+
+**File:** `src\features\auth\hooks\useAuth.ts` (line 33)
+
+**Context:** Used in `handleVerifyOtp` function
+
+```typescript
+const handleVerifyOtp = useCallback(async (code: string) => {
+```
+
+**Parameters used:** `() => {...}`, `[phone, router]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[phone, router]`
+
+### Usage 3
+
+**File:** `src\features\auth\hooks\useAuth.ts` (line 52)
+
+**Context:** Used in `handleBack` function
+
+```typescript
+const handleBack = useCallback(() => {
+```
+
+**Parameters used:** `() => {...}`, `[]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[]`
+
+### Usage 4
+
+**File:** `src\features\auth\hooks\useOtpTimer.ts` (line 26)
+
+**Context:** Used in `resetTimer` function
+
+```typescript
+const resetTimer = useCallback(() => {
+```
+
+**Parameters used:** `() => {...}`, `[initialTime]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[initialTime]`
+
+### Usage 5
+
+**File:** `src\features\auth\hooks\usePhoneValidation.ts` (line 10)
+
+**Context:** Used in `validatePhone` function
+
+```typescript
+const validatePhone = useCallback((value: string) => {
+```
+
+**Parameters used:** `() => {...}`, `[]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[]`
+
+### Usage 6
+
+**File:** `src\features\explore\hooks\useExplore.ts` (line 14)
+
+**Context:** Used in `fetchPosts` function
+
+```typescript
+const fetchPosts = useCallback(async (pageNum: number, reset: boolean = false) => {
+```
+
+**Parameters used:** `() => {...}`, `[]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[]`
+
+### Usage 7
+
+**File:** `src\features\explore\hooks\useExplore.ts` (line 45)
+
+**Context:** Used in `loadMore` function
+
+```typescript
+const loadMore = useCallback(() => {
+```
+
+**Parameters used:** `() => {...}`, `[...]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[...]`
+
+### Usage 8
+
+**File:** `src\features\explore\hooks\useSearch.ts` (line 18)
+
+**Context:** Used in `handleChange` function
+
+```typescript
+const handleChange = useCallback((value: string) => {
+```
+
+**Parameters used:** `() => {...}`, `[]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[]`
+
+### Usage 9
+
+**File:** `src\features\explore\hooks\useSearch.ts` (line 23)
+
+**Context:** Used in `handleClear` function
+
+```typescript
+const handleClear = useCallback(() => {
+```
+
+**Parameters used:** `() => {...}`, `[onSearch]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[onSearch]`
+
+### Usage 10
+
+**File:** `src\features\create\components\ImageEditor.tsx` (line 32)
+
+**Context:** Used in `applyEdits` function
+
+```typescript
+const applyEdits = useCallback(async () => {
+```
+
+**Parameters used:** `() => {...}`, `[...]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[...]`
+
+### Usage 11
+
+**File:** `src\features\create\hooks\useImageUpload.ts` (line 41)
+
+**Context:** Used in `addFiles` function
+
+```typescript
+const addFiles = useCallback(
+```
+
+**Parameters used:** `() => {...}`, `[{...}, maxFiles]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[{...}, maxFiles]`
+
+### Usage 12
+
+**File:** `src\features\create\hooks\useImageUpload.ts` (line 83)
+
+**Context:** Used in `uploadFiles` function
+
+```typescript
+const uploadFiles = useCallback(async () => {
+```
+
+**Parameters used:** `() => {...}`, `[files, convertToWebP, webpQuality]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[files, convertToWebP, webpQuality]`
+
+### Usage 13
+
+**File:** `src\features\create\hooks\useStoryEditor.ts` (line 58)
+
+**Context:** Used in `applyEdits` function
+
+```typescript
+const applyEdits = useCallback(async () => {
+```
+
+**Parameters used:** `() => {...}`, `[...]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[...]`
+
+### Usage 14
+
+**File:** `src\features\post\hooks\usePostActions.ts` (line 29)
+
+**Context:** Used in `toggleLike` function
+
+```typescript
+const toggleLike = useCallback(async (postId: number) => {
+```
+
+**Parameters used:** `() => {...}`, `[{...}, isProcessing]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[{...}, isProcessing]`
+
+### Usage 15
+
+**File:** `src\features\post\hooks\usePostActions.ts` (line 55)
+
+**Context:** Used in `toggleSave` function
+
+```typescript
+const toggleSave = useCallback(async (postId: number) => {
+```
+
+**Parameters used:** `() => {...}`, `[{...}, isProcessing]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[{...}, isProcessing]`
+
+### Usage 16
+
+**File:** `src\features\post\hooks\usePostActions.ts` (line 76)
+
+**Context:** Used in `toggleBookmark` function
+
+```typescript
+const toggleBookmark = useCallback(async (postId: number) => {
+```
+
+**Parameters used:** `() => {...}`, `[{...}, isProcessing]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[{...}, isProcessing]`
+
+### Usage 17
+
+**File:** `src\features\post\hooks\usePostActions.ts` (line 97)
+
+**Context:** Used in `sharePost` function
+
+```typescript
+const sharePost = useCallback(async (postId: number, platform?: string) => {
+```
+
+**Parameters used:** `() => {...}`, `[isProcessing]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[isProcessing]`
+
+### Usage 18
+
+**File:** `src\features\post\hooks\usePostActions.ts` (line 138)
+
+**Context:** Used in `reportPost` function
+
+```typescript
+const reportPost = useCallback(async (postId: number, reason: string) => {
+```
+
+**Parameters used:** `() => {...}`, `[isProcessing]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[isProcessing]`
+
+### Usage 19
+
+**File:** `src\features\post\hooks\usePostActions.ts` (line 152)
+
+**Context:** Used in `blockUser` function
+
+```typescript
+const blockUser = useCallback(async (username: string) => {
+```
+
+**Parameters used:** `() => {...}`, `[isProcessing]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[isProcessing]`
+
+### Usage 20
+
+**File:** `src\features\post\hooks\usePostActions.ts` (line 167)
+
+**Context:** Used in `notInterested` function
+
+```typescript
+const notInterested = useCallback(async (postId: number) => {
+```
+
+**Parameters used:** `() => {...}`, `[isProcessing]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[isProcessing]`
+
+### Usage 21
+
+**File:** `src\features\post\hooks\usePostActions.ts` (line 182)
+
+**Context:** Used in `incrementView` function
+
+```typescript
+const incrementView = useCallback(() => {
+```
+
+**Parameters used:** `() => {...}`, `[]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[]`
+
+### Usage 22
+
+**File:** `src\features\post\hooks\usePostActions.ts` (line 190)
+
+**Context:** Used in `resetActions` function
+
+```typescript
+const resetActions = useCallback(() => {
+```
+
+**Parameters used:** `() => {...}`, `[]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[]`
+
+### Usage 23
+
+**File:** `src\features\post\hooks\usePostActions.ts` (line 202)
+
+**Context:** Used in `setPostState` function
+
+```typescript
+const setPostState = useCallback((newState: Partial<PostActionState>) => {
+```
+
+**Parameters used:** `() => {...}`, `[]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[]`
+
+### Usage 24
+
+**File:** `src\features\stories\components\StoryViewer.tsx` (line 103)
+
+**Context:** Used in `handleNext` function
+
+```typescript
+const handleNext = useCallback(() => {
+```
+
+**Parameters used:** `() => {...}`, `[hasNext, isPaused, onNext]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[hasNext, isPaused, onNext]`
+
+### Usage 25
+
+**File:** `src\features\stories\components\StoryViewer.tsx` (line 109)
+
+**Context:** Used in `handlePrev` function
+
+```typescript
+const handlePrev = useCallback(() => {
+```
+
+**Parameters used:** `() => {...}`, `[hasPrev, isPaused, onPrev]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[hasPrev, isPaused, onPrev]`
+
+### Usage 26
+
+**File:** `src\features\stories\hooks\useStories.ts` (line 101)
+
+**Context:** Used in `nextStory` function
+
+```typescript
+const nextStory = useCallback(() => {
+```
+
+**Parameters used:** `() => {...}`, `[selectedStoryIndex, stories]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[selectedStoryIndex, stories]`
+
+### Usage 27
+
+**File:** `src\features\stories\hooks\useStories.ts` (line 124)
+
+**Context:** Used in `prevStory` function
+
+```typescript
+const prevStory = useCallback(() => {
+```
+
+**Parameters used:** `() => {...}`, `[selectedStoryIndex, stories]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[selectedStoryIndex, stories]`
+
+### Usage 28
+
+**File:** `src\features\stories\hooks\useStoryTimer.ts` (line 42)
+
+**Context:** Used in `stopAnimation` function
+
+```typescript
+const stopAnimation = useCallback(() => {
+```
+
+**Parameters used:** `() => {...}`, `[]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[]`
+
+### Usage 29
+
+**File:** `src\features\stories\hooks\useStoryTimer.ts` (line 50)
+
+**Context:** Used in `startAnimation` function
+
+```typescript
+const startAnimation = useCallback(() => {
+```
+
+**Parameters used:** `() => {...}`, `[...]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[...]`
+
+### Usage 30
+
+**File:** `src\features\stories\hooks\useStoryTimer.ts` (line 78)
+
+**Context:** Used in `reset` function
+
+```typescript
+const reset = useCallback(() => {
+```
+
+**Parameters used:** `() => {...}`, `[autoPlay, startAnimation, stopAnimation]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[autoPlay, startAnimation, stopAnimation]`
+
+### Usage 31
+
+**File:** `src\features\stories\hooks\useStoryTimer.ts` (line 92)
+
+**Context:** Used in `start` function
+
+```typescript
+const start = useCallback(() => {
+```
+
+**Parameters used:** `() => {...}`, `[isCompleted, reset, startAnimation]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[isCompleted, reset, startAnimation]`
+
+### Usage 32
+
+**File:** `src\features\stories\hooks\useStoryTimer.ts` (line 103)
+
+**Context:** Used in `pause` function
+
+```typescript
+const pause = useCallback(() => {
+```
+
+**Parameters used:** `() => {...}`, `[isPlaying, isPaused, stopAnimation]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[isPlaying, isPaused, stopAnimation]`
+
+### Usage 33
+
+**File:** `src\features\stories\hooks\useStoryTimer.ts` (line 115)
+
+**Context:** Used in `resume` function
+
+```typescript
+const resume = useCallback(() => {
+```
+
+**Parameters used:** `() => {...}`, `[isCompleted, isPlaying, startAnimation]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[isCompleted, isPlaying, startAnimation]`
+
+### Usage 34
+
+**File:** `src\features\stories\hooks\useStoryTimer.ts` (line 124)
+
+**Context:** Used in `seek` function
+
+```typescript
+const seek = useCallback((percent: number) => {
+```
+
+**Parameters used:** `() => {...}`, `[...]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[...]`
+
+### Usage 35
+
+**File:** `src\features\stories\hooks\useStoryTimer.ts` (line 136)
+
+**Context:** Used in `skip` function
+
+```typescript
+const skip = useCallback(() => {
+```
+
+**Parameters used:** `() => {...}`, `[isCompleted, onComplete, stopAnimation]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[isCompleted, onComplete, stopAnimation]`
+
+### Usage 36
+
+**File:** `src\features\stories\hooks\useStoryTimer.ts` (line 147)
+
+**Context:** Used in `previous` function
+
+```typescript
+const previous = useCallback(() => {
+```
+
+**Parameters used:** `() => {...}`, `[reset]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[reset]`
+
+### Usage 37
+
+**File:** `src\features\stories\utils\stories.utils.ts` (line 98)
+
+**Context:** Used in `nextStory` function
+
+```typescript
+const nextStory = useCallback(() => {
+```
+
+**Parameters used:** `() => {...}`, `[selectedStoryIndex, stories]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[selectedStoryIndex, stories]`
+
+### Usage 38
+
+**File:** `src\features\stories\utils\stories.utils.ts` (line 119)
+
+**Context:** Used in `prevStory` function
+
+```typescript
+const prevStory = useCallback(() => {
+```
+
+**Parameters used:** `() => {...}`, `[selectedStoryIndex, stories]`
+
+**Default values:**
+
+- `callback`: `function`
+- `initialArray`: `[selectedStoryIndex, stories]`
+
+
+
+## Source
+`React Built-in`

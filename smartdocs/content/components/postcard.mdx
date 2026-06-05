@@ -1,0 +1,33 @@
+---
+title: PostCard
+slug: /components/postcard
+---
+
+# PostCard
+
+
+
+## Real Usage Examples
+
+### Usage 1
+
+```tsx
+<PostCard
+key={post.id}
+post={post}
+onLike={likePost}
+onSave={savePost}
+/>
+```
+
+## Props
+
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `post` | `Post` | Yes | - |  |
+| `onLike` | `(id: number) => void` | Yes | - |  |
+| `onSave` | `(id: number) => void` | Yes | - |  |
+
+
+## Source
+`src\features\post\components\PostCard.tsx`

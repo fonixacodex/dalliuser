@@ -1,0 +1,42 @@
+---
+title: PostActions
+slug: /components/postactions
+---
+
+# PostActions
+
+
+
+## Real Usage Examples
+
+### Usage 1
+
+```tsx
+<PostActions
+postId={post.id}
+isLiked={isLiked}
+isSaved={isSaved}
+likesCount={likesCount}
+onLike={handleLike}
+onSave={handleSave}
+onCommentClick={handleCommentClick}
+onShare={handleShare}
+/>
+```
+
+## Props
+
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `postId` | `number` | Yes | - |  |
+| `isLiked` | `boolean` | Yes | - |  |
+| `isSaved` | `boolean` | Yes | - |  |
+| `likesCount` | `number` | Yes | - |  |
+| `onLike` | `() => void` | Yes | - |  |
+| `onSave` | `() => void` | Yes | - |  |
+| `onCommentClick` | `() => void` | Yes | - |  |
+| `onShare` | `() => void` | Yes | - |  |
+
+
+## Source
+`src\features\post\components\PostActions.tsx`

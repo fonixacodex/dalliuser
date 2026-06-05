@@ -1,0 +1,37 @@
+---
+title: NotificationItem
+slug: /components/notificationitem
+---
+
+# NotificationItem
+
+
+
+## Real Usage Examples
+
+### Usage 1
+
+```tsx
+<NotificationItem
+key={notif.id}
+notification={notif}
+onAccept={onAccept}
+onReject={onReject}
+onMarkAsRead={onMarkAsRead}
+onFollowBack={onFollowBack}
+/>
+```
+
+## Props
+
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `notification` | `Notification` | Yes | - |  |
+| `onAccept` | `((id: number) => void)` | No | - |  |
+| `onReject` | `((id: number) => void)` | No | - |  |
+| `onMarkAsRead` | `((id: number) => void)` | No | - |  |
+| `onFollowBack` | `((username: string) => void)` | No | - |  |
+
+
+## Source
+`src\features\notifications\components\NotificationItem.tsx`

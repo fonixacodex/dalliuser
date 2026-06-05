@@ -1,0 +1,27 @@
+---
+title: PostModal
+slug: /components/postmodal
+---
+
+# PostModal
+
+
+
+## Real Usage Examples
+
+### Usage 1
+
+```tsx
+<PostModal post={selectedPost} onClose={() => setSelectedPost(null)} />
+```
+
+## Props
+
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `post` | `{ id: number; username: string; userAvatar: string; image: string; caption: string; likes: number; comments: number; timestamp: string; }` | Yes | - |  |
+| `onClose` | `() => void` | Yes | - |  |
+
+
+## Source
+`src\features\explore\components\PostModal.tsx`
