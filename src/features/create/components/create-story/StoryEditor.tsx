@@ -1,20 +1,21 @@
-'use client';
+"use client";
 
-import React, { useRef, useState, useCallback, useEffect } from 'react';
-import { StoryCanvas } from './components/StoryCanvas';
-import { Toolbar } from './components/Toolbar';
-import { useStoryStore } from './store/storyStore';
-import { exportStage } from './utils';
-import { ArrowLeftIcon, DownloadIcon, RotateCcwIcon } from 'lucide-react';
-import { useGesture } from '@use-gesture/react';
-import type Konva from 'konva';
-import toast from 'react-hot-toast';
+import React, { useRef, useState, useCallback, useEffect } from "react";
+import { StoryCanvas } from "./components/StoryCanvas";
+import { Toolbar } from "./components/Toolbar";
+import { useStoryStore } from "./store/storyStore";
+import { exportStage } from "./utils";
+import { ArrowLeftIcon, DownloadIcon, RotateCcwIcon } from "lucide-react";
+import { useGesture } from "@use-gesture/react";
+import type Konva from "konva";
+import toast from "react-hot-toast";
 
 export const StoryEditor: React.FC = () => {
   const stageRef = useRef<Konva.Stage | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isExporting, setIsExporting] = useState(false);
-  const { selectedLayerId, updateLayer, resetLayerTransform, layers } = useStoryStore();
+  const { selectedLayerId, updateLayer, resetLayerTransform, layers } =
+    useStoryStore();
 
   const selectedLayer = layers.find((l) => l.id === selectedLayerId);
 
@@ -66,7 +67,7 @@ export const StoryEditor: React.FC = () => {
         scaleBounds: { min: 0.1, max: 5 },
         rubberband: true,
       },
-    }
+    },
   );
 
   // Double-tap to reset transform
@@ -75,36 +76,38 @@ export const StoryEditor: React.FC = () => {
     const handleDoubleTap = () => {
       const now = Date.now();
       const timeSinceLast = now - lastTap;
-      
+
       if (timeSinceLast < 300 && timeSinceLast > 0) {
         if (selectedLayerId) {
           resetLayerTransform(selectedLayerId);
-          toast.success('Transform reset');
+          toast.success("Transform reset");
         }
       }
-      
+
       lastTap = now;
     };
 
     const container = containerRef.current;
     if (container) {
-      container.addEventListener('touchend', handleDoubleTap);
-      return () => container.removeEventListener('touchend', handleDoubleTap);
+      container.addEventListener("touchend", handleDoubleTap);
+      return () => container.removeEventListener("touchend", handleDoubleTap);
     }
   }, [selectedLayerId, resetLayerTransform]);
 
   const handleExport = async () => {
     if (!stageRef.current) {
-      toast.error('Canvas not ready');
+      toast.error("Canvas not ready");
       return;
     }
 
     setIsExporting(true);
-    
+
     try {
       // Clear selection before export
       const stage = stageRef.current;
-      const transformer = stage.findOne('Transformer') as Konva.Transformer | undefined;
+      const transformer = stage.findOne("Transformer") as
+        | Konva.Transformer
+        | undefined;
       if (transformer) {
         transformer.nodes([]);
         stage.batchDraw();
@@ -116,36 +119,35 @@ export const StoryEditor: React.FC = () => {
       // Export at high resolution (1080x1920)
       const dataURL = stage.toDataURL({
         pixelRatio: 3, // 360 * 3 = 1080, 640 * 3 = 1920
-        mimeType: 'image/png',
+        mimeType: "image/png",
         quality: 1,
       });
 
       // Send to API
-      const response = await fetch('/api/story-upload', {
-        method: 'POST',
+      const response = await fetch("/api/story-upload", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ image: dataURL }),
       });
 
       if (!response.ok) {
-        throw new Error('Upload failed');
+        throw new Error("Upload failed");
       }
 
       const result = await response.json();
-      toast.success('Story saved successfully!');
-      console.log('Upload result:', result);
+      toast.success("Story saved successfully!");
+      console.log("Upload result:", result);
 
       // Also trigger download
-      const link = document.createElement('a');
+      const link = document.createElement("a");
       link.download = `story-${Date.now()}.png`;
       link.href = dataURL;
       link.click();
-      
     } catch (error) {
-      console.error('Export failed:', error);
-      toast.error('Failed to save story');
+      console.error("Export failed:", error);
+      toast.error("Failed to save story");
     } finally {
       setIsExporting(false);
     }
@@ -155,28 +157,28 @@ export const StoryEditor: React.FC = () => {
     if (window.history.length > 1) {
       window.history.back();
     } else {
-      window.location.href = '/';
+      window.location.href = "/";
     }
   };
 
   return (
-    <div className="min-h-screen bg-gray-950 flex flex-col">
+    <>
       {/* Top bar */}
-      <div className="bg-gray-900 border-b border-gray-800 p-4 flex items-center justify-between">
+      <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-b border-gray-700/50 p-4 flex items-center justify-between shadow-lg">
         <button
           onClick={handleBack}
-          className="flex items-center gap-2 text-white hover:text-gray-300 transition-colors"
+          className="flex items-center gap-2 text-white hover:text-blue-400 transition-colors"
         >
           <ArrowLeftIcon className="w-5 h-5" />
           <span className="text-sm font-medium">Back</span>
         </button>
 
-        <h1 className="text-lg font-semibold text-white">Story Editor</h1>
+        <h1 className="text-lg font-semibold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Story Editor</h1>
 
         <button
           onClick={handleExport}
           disabled={isExporting || layers.length === 0}
-          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-700 disabled:cursor-not-allowed text-white rounded-lg transition-colors text-sm font-medium"
+          className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 disabled:from-gray-700 disabled:to-gray-700 disabled:cursor-not-allowed text-white rounded-lg transition-all text-sm font-medium shadow-lg disabled:shadow-none"
         >
           {isExporting ? (
             <>
@@ -193,21 +195,24 @@ export const StoryEditor: React.FC = () => {
       </div>
 
       {/* Canvas area */}
-      <div className="flex-1 flex items-center justify-center p-4" ref={containerRef}>
+      <div
+        className="flex-1 flex items-center justify-center p-4 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"
+        ref={containerRef}
+      >
         <StoryCanvas onStageReady={handleStageReady} />
       </div>
 
       {/* Instructions */}
-      <div className="px-4 py-2 bg-gray-900 border-t border-gray-800">
-        <p className="text-xs text-gray-400 text-center">
+      <div className="px-4 py-3 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-t border-gray-700/50">
+        <p className="text-xs text-gray-300 text-center font-medium">
           {selectedLayerId
-            ? '💡 Pinch to zoom/rotate • Double-tap to reset • Drag to move'
-            : '👆 Tap any element to select • Add elements from toolbar below'}
+            ? "💡 Pinch to resize/rotate • Double-tap text to edit • Drag to move"
+            : "✨ Add images and text from the toolbar below"}
         </p>
       </div>
 
       {/* Bottom toolbar */}
       <Toolbar />
-    </div>
+    </>
   );
 };

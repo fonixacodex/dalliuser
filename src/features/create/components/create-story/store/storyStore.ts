@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-export type LayerType = 'image' | 'text' | 'sticker';
+export type LayerType = 'image' | 'text';
 
 export interface Transform {
   x: number;
@@ -29,21 +29,15 @@ export interface TextLayer extends Transform {
   width: number;
 }
 
-export interface StickerLayer extends Transform {
-  id: string;
-  type: 'sticker';
-  imageUrl: string;
-  image: HTMLImageElement | null;
-  width: number;
-  height: number;
-}
-
-export type Layer = ImageLayer | TextLayer | StickerLayer;
+export type Layer = ImageLayer | TextLayer;
 
 interface StoryState {
   layers: Layer[];
   selectedLayerId: string | null;
   stageSize: { width: number; height: number };
+  isEditingText: boolean;
+  editingLayerId: string | null;
+  canvasBackgroundColor: string;
   
   // Actions
   addLayer: (layer: Layer) => void;
@@ -54,12 +48,18 @@ interface StoryState {
   sendBackward: (id: string) => void;
   clearSelection: () => void;
   resetLayerTransform: (id: string) => void;
+  startEditingText: (id: string) => void;
+  stopEditingText: () => void;
+  setCanvasBackgroundColor: (color: string) => void;
 }
 
 export const useStoryStore = create<StoryState>((set) => ({
   layers: [],
   selectedLayerId: null,
   stageSize: { width: 360, height: 640 }, // 9:16 aspect ratio
+  isEditingText: false,
+  editingLayerId: null,
+  canvasBackgroundColor: '#ffffff',
   
   addLayer: (layer) => {
     set((state) => ({
@@ -130,5 +130,17 @@ export const useStoryStore = create<StoryState>((set) => ({
         } as Layer;
       }),
     }));
+  },
+  
+  startEditingText: (id) => {
+    set({ isEditingText: true, editingLayerId: id });
+  },
+  
+  stopEditingText: () => {
+    set({ isEditingText: false, editingLayerId: null });
+  },
+  
+  setCanvasBackgroundColor: (color) => {
+    set({ canvasBackgroundColor: color });
   },
 }));

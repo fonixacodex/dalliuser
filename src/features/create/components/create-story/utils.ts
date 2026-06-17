@@ -1,4 +1,4 @@
-import { ImageLayer, StickerLayer, TextLayer } from './store/storyStore';
+import { ImageLayer, TextLayer } from './store/storyStore';
 
 /**
  * Load an image from a URL or File and return an HTMLImageElement
@@ -83,36 +83,6 @@ export const createTextLayer = (
     width: 200,
     scaleX: 1,
     scaleY: 1,
-    rotation: 0,
-  };
-};
-
-/**
- * Create a new sticker layer
- */
-export const createStickerLayer = async (
-  file: File,
-  stageWidth: number,
-  stageHeight: number
-): Promise<StickerLayer> => {
-  const img = await loadImage(file);
-  const imageUrl = URL.createObjectURL(file);
-  
-  // Stickers should be smaller than images
-  const maxSize = Math.min(stageWidth, stageHeight) * 0.3;
-  const scale = Math.min(maxSize / img.width, maxSize / img.height, 1);
-  
-  return {
-    id: generateId(),
-    type: 'sticker',
-    imageUrl,
-    image: img,
-    x: stageWidth / 2,
-    y: stageHeight / 2,
-    width: img.width,
-    height: img.height,
-    scaleX: scale,
-    scaleY: scale,
     rotation: 0,
   };
 };
